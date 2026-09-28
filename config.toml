@@ -1,0 +1,7 @@
+baseURL = 'https://hussyvel.com/'
+languageCode = 'en-us'
+title = 'My Website'
+theme = 'PaperMod'
+
+[params]
+description = "Hussyvel's personal space to share ideas, technology, and learning."
