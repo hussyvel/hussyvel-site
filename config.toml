@@ -1,7 +1,51 @@
 baseURL = 'https://hussyvel.com/'
 languageCode = 'en-us'
-title = 'My Website'
+title = 'HUSSYVEL RIBEIRO'
 theme = 'PaperMod'
 
 [params]
-description = "Hussyvel's personal space to share ideas, technology, and learning."
+  # Ativar e configurar o Profile Mode
+  [params.profileMode]
+    enabled = true
+    title = "Hi, I'm Hussyvel 👋"
+    subtitle = "Mid-level Software Developer | Java, Angular & Linux"
+    
+    # Certifique-se de que coloca uma foto sua (profile.jpg) na pasta static/img/
+    imageUrl = "/img/profile.jpg" 
+    imageWidth = 150
+    imageHeight = 150
+    imageTitle = "Hussyvel Ribeiro"
+    
+    # Botões rápidos abaixo da foto
+    [[params.profileMode.buttons]]
+      name = "Read Posts"
+      url = "/posts/"
+    [[params.profileMode.buttons]]
+      name = "About Me"
+      url = "/about/"
+
+  # Ligações Sociais (GitHub e LinkedIn)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/hussyvel"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/hussyvelribeiro"
+
+# Configuração do Menu de Navegação Superior
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
