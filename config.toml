@@ -11,7 +11,7 @@ theme = 'PaperMod'
     subtitle = "Mid-level Software Developer | Java, Angular & Linux"
     
     # Certifique-se de que coloca uma foto sua (profile.jpg) na pasta static/img/
-    imageUrl = "/img/profile.jpg" 
+    imageUrl = "/images/perfil-linkedin2.jpeg" 
     imageWidth = 150
     imageHeight = 150
     imageTitle = "Hussyvel Ribeiro"
