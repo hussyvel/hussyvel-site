@@ -34,16 +34,21 @@ theme = 'PaperMod'
 
 # Configuração do Menu de Navegação Superior
 [menu]
+  # Botão para os Artigos
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
     url = "/posts/"
     weight = 10
+
+  # Botão para as Categorias/Tags
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
     weight = 20
+
+  # Botão para a página Sobre Mim
   [[menu.main]]
     identifier = "about"
     name = "About"
