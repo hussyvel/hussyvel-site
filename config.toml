@@ -8,10 +8,10 @@ theme = 'PaperMod'
   [params.profileMode]
     enabled = true
     title = "Hi, I'm Hussyvel 👋"
-    subtitle = "Mid-level Software Developer | Java, Angular & Linux"
+    subtitle = "Full Stack Software Developer | Java, GO, C, Javascript (Angular) and SQL"
     
     # Certifique-se de que coloca uma foto sua (profile.jpg) na pasta static/img/
-    imageUrl = "/images/perfil-linkedin2.jpeg" 
+    imageUrl = "/img/perfil-linkedin2.jpeg" 
     imageWidth = 150
     imageHeight = 150
     imageTitle = "Hussyvel Ribeiro"
