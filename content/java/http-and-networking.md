@@ -16,6 +16,8 @@ Second post in the series — **[start from the hub]({{< ref "/java" >}})** if y
 
 `fetch("https://api.example.com/orders/42")` doesn't know how to reach `api.example.com` — TCP/IP routes by IP address, not by hostname. So the first step is a **DNS lookup**: the OS (or browser cache) resolves `api.example.com` to something like `203.0.113.10`. This usually means a UDP query to a resolver, which may itself query a chain of nameservers if nothing is cached. In production this address is almost never a single server — it's typically a load balancer or the edge of a CDN.
 
+![Comic: a site is down and everything looks like it's on fire, someone asks if it's DNS, gets told it's never DNS, and the error screen reveals it was DNS all along](/img/comics/its-always-dns.svg)
+
 ## TCP: the handshake before anything useful happens
 
 With an IP address in hand, the OS opens a **TCP connection** — a three-way handshake:

@@ -39,6 +39,8 @@ fetch() called
   → event loop picks up the microtask → your `await` resumes
 ```
 
+![Comic: a developer insists fetch() isn't working, while the event loop calmly points out the promise resolved 4ms ago — they just forgot the await](/img/comics/js-event-loop.svg)
+
 ## What `fetch` actually triggers
 
 Calling `fetch("/api/orders/42")` sets off a chain that this series follows layer by layer:

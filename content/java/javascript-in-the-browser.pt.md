@@ -39,6 +39,8 @@ fetch() chamado
   → event loop pega a microtask → seu `await` é retomado
 ```
 
+![Tirinha: um desenvolvedor insiste que o fetch() não funciona, enquanto o event loop responde calmamente que a promise resolveu há 4ms — ele só esqueceu o await](/img/comics/js-event-loop.pt.svg)
+
 ## O que o `fetch` realmente dispara
 
 Chamar `fetch("/api/orders/42")` inicia uma cadeia que esta série acompanha camada por camada:

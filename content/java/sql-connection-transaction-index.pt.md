@@ -70,6 +70,8 @@ EXPLAIN ANALYZE SELECT * FROM orders WHERE customer_id = 42;
 
 Numa tabela pequena a diferença é invisível. Numa tabela com dez milhões de linhas, é a diferença entre uma consulta que retorna em 2 milissegundos e uma que leva 2 segundos — e uma consulta de 2 segundos segurando uma conexão daquele pool de 10 mencionado acima já é suficiente, sob tráfego real, pra esgotar o pool e começar a enfileirar todas as outras requisições da aplicação, não importa o que elas estivessem tentando fazer.
 
+![Tirinha: um desenvolvedor acha que um WHERE vai ser rápido, o banco de dados sua fazendo um sequential scan completo que leva 2000ms, e a piada final pergunta se a coluna chegou a ser indexada](/img/comics/missing-index.pt.svg)
+
 ## A viagem de volta
 
 Assim que a consulta retorna linhas, o driver JDBC as mapeia pra objetos Java, a conexão é devolvida ao pool (não fechada), a transação é commitada, e seu método de service retorna. A partir daí, a resposta refaz toda a cadeia ao contrário: o Spring serializa seu objeto em JSON, o servlet escreve isso no socket que o Tomcat possui, a thread trabalhadora da JVM é liberada de volta pro seu pool, os bytes viajam de volta pelo nginx, de volta pela conexão TCP/TLS, e finalmente chegam de volta na chamada `fetch()` onde esta série começou — onde uma microtask retoma uma função `async` suspensa, e o navegador redesenha uma tela com um número que, algumas centenas de milissegundos antes, era uma linha quieta no disco.

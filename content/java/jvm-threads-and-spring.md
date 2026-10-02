@@ -18,6 +18,8 @@ Spring Boot's embedded Tomcat doesn't spawn a new OS thread per request indefini
 
 This bound is not a performance tweak you can ignore — it's a hard ceiling on concurrency. If all 200 threads are busy (say, each blocked waiting on a slow database query), request #201 queues. This is precisely why a slow SQL query — the kind the [last post in this series]({{< ref "sql-connection-transaction-index.md" >}}) deals with directly — doesn't just make *that* request slow. It can starve the thread pool and make the entire application unresponsive, even for requests that don't touch the database at all.
 
+![Comic: a developer panics that everything is slow, even the health check, and it turns out one slow query is blocking all 200 threads in the pool](/img/comics/thread-pool-exhausted.svg)
+
 ## The JVM thread, not the OS thread
 
 It's worth being precise here: a Java `Thread` is, in the standard HotSpot JVM (pre–Project Loom/virtual threads), a thin wrapper around a native OS thread. When Tomcat's worker thread blocks on a JDBC call waiting for the database, it isn't doing clever cooperative scheduling — it's genuinely parking an OS thread, which the Linux kernel's scheduler then simply doesn't run until the I/O completes. This is the direct, unglamorous link back to the [process and scheduling model]({{< ref "linux-process-socket-nginx.md" >}}) from the previous post: Java's concurrency model, for traditional (non-reactive) Spring MVC, rides entirely on OS-level threads and blocking I/O.

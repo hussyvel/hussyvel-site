@@ -55,6 +55,8 @@ Tanto o nginx quanto a JVM rodando sua aplicação Spring são processos Linux c
 
 É também por isso que limites de recursos importam de um jeito que surpreende quem vem de linguagens de mais alto nível: um processo Linux tem um limite de descritores de arquivo abertos (`ulimit -n`), e toda conexão aberta — cliente-pro-nginx, nginx-pro-Tomcat, Tomcat-pro-banco — consome um. Bata nesse limite sob carga, e você recebe erros de `Too many open files` que não têm nada a ver com a lógica da sua aplicação.
 
+![Tirinha: um servidor começa a dar erro sob carga, os logs revelam "Too many open files", e o nginx diz que tentou avisar todo mundo sobre aqueles descritores de arquivo](/img/comics/too-many-open-files.pt.svg)
+
 ## Pra onde a requisição vai agora
 
 O fluxo de bytes que o nginx repassou pra `127.0.0.1:8080` agora está sentado num socket que pertence ao processo da JVM — mais especificamente, ao pool de threads do conector do Tomcat. O que acontece no instante em que o Tomcat lê esses bytes — como ele os transforma num `HttpServletRequest`, entrega pra uma thread, e como o Spring roteia o trabalho dessa thread pro seu controller — é onde o próprio modelo de concorrência da JVM assume o controle.

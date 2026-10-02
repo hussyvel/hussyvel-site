@@ -55,6 +55,8 @@ Both nginx and the JVM running your Spring app are ordinary Linux processes — 
 
 This is also why resource limits matter in ways that surprise people coming from higher-level languages: a Linux process has a limit on open file descriptors (`ulimit -n`), and every open connection — client-to-nginx, nginx-to-Tomcat, Tomcat-to-database — consumes one. Hit that limit under load, and you get `Too many open files` errors that have nothing to do with your application logic.
 
+![Comic: a server throws errors under load, the logs reveal "Too many open files," and nginx says it tried to warn everyone about those file descriptors](/img/comics/too-many-open-files.svg)
+
 ## Where the request goes next
 
 The byte stream nginx proxied to `127.0.0.1:8080` is now sitting in a socket that belongs to the JVM process — specifically, to Tomcat's connector thread pool. What happens the instant Tomcat reads those bytes — how it turns them into a `HttpServletRequest`, hands them to a thread, and how Spring routes that thread's work to your controller — is where the JVM's own concurrency model takes over.

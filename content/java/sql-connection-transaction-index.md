@@ -70,6 +70,8 @@ EXPLAIN ANALYZE SELECT * FROM orders WHERE customer_id = 42;
 
 On a small table the difference is invisible. On a table with ten million rows, it's the difference between a query that returns in 2 milliseconds and one that takes 2 seconds — and a 2-second query holding a connection from that 10-connection pool mentioned above is enough, under real traffic, to exhaust the pool and start queuing every other request in the application, regardless of what those requests were trying to do.
 
+![Comic: a developer assumes a WHERE clause will be fast, the database sweats through a full sequential scan taking 2000ms, and the punchline asks whether the column was ever indexed](/img/comics/missing-index.svg)
+
 ## The trip back
 
 Once the query returns rows, the JDBC driver maps them into Java objects, the connection is released back to the pool (not closed), the transaction commits, and your service method returns. From there, the response retraces the entire chain in reverse: Spring serializes your object to JSON, the servlet writes it to the socket Tomcat owns, the JVM's worker thread is freed back to its pool, the bytes travel back through nginx, back across the TCP/TLS connection, and finally arrive back at the `fetch()` call where this series started — where a microtask resumes a suspended `async` function, and a browser repaints a screen with a number that, a few hundred milliseconds earlier, was a row sitting quietly on disk.

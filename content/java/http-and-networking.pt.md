@@ -16,6 +16,8 @@ Segundo post da série — **[comece pelo hub]({{< ref "/java" >}})** se você c
 
 `fetch("https://api.example.com/orders/42")` não sabe como chegar em `api.example.com` — TCP/IP roteia por endereço IP, não por nome de host. Então o primeiro passo é uma **consulta DNS**: o sistema operacional (ou o cache do navegador) resolve `api.example.com` pra algo como `203.0.113.10`. Isso geralmente significa uma consulta UDP a um resolver, que por sua vez pode consultar uma cadeia de nameservers se nada estiver em cache. Em produção, esse endereço quase nunca é um único servidor — normalmente é um load balancer ou a borda de uma CDN.
 
+![Tirinha: um site cai e parece que tudo está pegando fogo, alguém pergunta se é o DNS, ouve que nunca é o DNS, e a tela de erro revela que era o DNS o tempo todo](/img/comics/its-always-dns.pt.svg)
+
 ## TCP: o handshake antes de qualquer coisa útil acontecer
 
 Com um endereço IP em mãos, o sistema operacional abre uma **conexão TCP** — um handshake de três vias:

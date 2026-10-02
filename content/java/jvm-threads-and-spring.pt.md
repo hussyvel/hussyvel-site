@@ -18,6 +18,8 @@ O Tomcat embutido do Spring Boot não cria uma nova thread do sistema operaciona
 
 Esse limite não é um ajuste de performance que você pode ignorar — é um teto rígido de concorrência. Se as 200 threads estiverem ocupadas (digamos, cada uma bloqueada esperando uma consulta lenta no banco), a requisição número 201 entra na fila. É exatamente por isso que uma consulta SQL lenta — do tipo que o [último post desta série]({{< ref "sql-connection-transaction-index.pt.md" >}}) trata diretamente — não deixa lenta só *aquela* requisição. Ela pode esgotar o thread pool e deixar a aplicação inteira sem resposta, até pra requisições que nem tocam no banco.
 
+![Tirinha: um desenvolvedor em pânico porque tudo está lento, até o health check, e descobre que uma única consulta lenta está bloqueando as 200 threads do pool](/img/comics/thread-pool-exhausted.pt.svg)
+
 ## A thread da JVM, não a thread do sistema operacional
 
 Vale ser preciso aqui: uma `Thread` do Java é, na JVM HotSpot padrão (antes do Project Loom/virtual threads), um invólucro fino em torno de uma thread nativa do sistema operacional. Quando a thread trabalhadora do Tomcat bloqueia numa chamada JDBC esperando o banco de dados, ela não está fazendo nenhum escalonamento cooperativo esperto — ela está genuinamente estacionando uma thread do SO, que o escalonador do kernel Linux simplesmente não executa até que o I/O termine. Essa é a ligação direta e nada glamourosa com o [modelo de processos e escalonamento]({{< ref "linux-process-socket-nginx.pt.md" >}}) do post anterior: o modelo de concorrência do Java, no Spring MVC tradicional (não reativo), roda inteiramente em cima de threads do sistema operacional e I/O bloqueante.
