@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Java | Hussyvel Ribeiro | Tech Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Java as the hub of a request&#39;s journey: from a browser click to a database row and back.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/java/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.49db6240b4502d2bf11bd12ed435a8e077885b93ccbe4921107bdb637a79551f.css" integrity="sha256-SdtiQLRQLSvxG9Eu1DWo4HeIW5PMvkkhEHvbY3p5VR8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/java/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/java/">
+<link rel="alternate" hreflang="pt" href="http://localhost:1313/pt/java/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Hussyvel Ribeiro | Tech Blog (Alt + H)">Hussyvel Ribeiro | Tech Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button><span class="nav-sep">|</span>
+                    <ul class="lang-menu">
+                        <li>
+                            <a href="http://localhost:1313/pt/" title="Português"
+                                aria-label="Português">Pt</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/resume/" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Java
+  </h1>
+  <div class="post-description">
+    Java as the hub of a request&rsquo;s journey: from a browser click to a database row and back.
+  </div>
+</header>
+<div class="post-content md-content"><p>A click happens in a browser. A few hundred milliseconds later, a page updates with data that, until that moment, only existed as a row in a database on another continent. In between, the request crosses five completely different worlds, each with its own rules, failure modes, and vocabulary.</p>
+<p>This series follows that journey end to end:</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 664 41"
+      >
+      <g transform='translate(8,16)'>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>J</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>v</text>
+<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='24' y='20' fill='currentColor' style='font-size:1em'>→</text>
+<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='40' y='20' fill='currentColor' style='font-size:1em'>J</text>
+<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='48' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='56' y='20' fill='currentColor' style='font-size:1em'>v</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='64' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='80' y='20' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='88' y='20' fill='currentColor' style='font-size:1em'>J</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='96' y='20' fill='currentColor' style='font-size:1em'>V</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='104' y='20' fill='currentColor' style='font-size:1em'>M</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='112' y='20' fill='currentColor' style='font-size:1em'>,</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>w</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='128' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='136' y='20' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='144' y='20' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='152' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='160' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>→</text>
+<text text-anchor='middle' x='168' y='20' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='176' y='20' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>H</text>
+<text text-anchor='middle' x='184' y='20' fill='currentColor' style='font-size:1em'>,</text>
+<text text-anchor='middle' x='192' y='4' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='200' y='4' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='200' y='20' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='208' y='4' fill='currentColor' style='font-size:1em'>P</text>
+<text text-anchor='middle' x='208' y='20' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='216' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='216' y='20' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='224' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='232' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='232' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='240' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='240' y='20' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='248' y='4' fill='currentColor' style='font-size:1em'>w</text>
+<text text-anchor='middle' x='248' y='20' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='256' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='264' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='264' y='20' fill='currentColor' style='font-size:1em'>→</text>
+<text text-anchor='middle' x='272' y='4' fill='currentColor' style='font-size:1em'>k</text>
+<text text-anchor='middle' x='280' y='20' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='288' y='4' fill='currentColor' style='font-size:1em'>→</text>
+<text text-anchor='middle' x='288' y='20' fill='currentColor' style='font-size:1em'>Q</text>
+<text text-anchor='middle' x='296' y='20' fill='currentColor' style='font-size:1em'>L</text>
+<text text-anchor='middle' x='304' y='4' fill='currentColor' style='font-size:1em'>L</text>
+<text text-anchor='middle' x='312' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='312' y='20' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='320' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='320' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='328' y='4' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='328' y='20' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='336' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='336' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='344' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='352' y='4' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='352' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='360' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='360' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='368' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='368' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='376' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='376' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='384' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='384' y='20' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='392' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='392' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='400' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='400' y='20' fill='currentColor' style='font-size:1em'>,</text>
+<text text-anchor='middle' x='408' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='416' y='4' fill='currentColor' style='font-size:1em'>,</text>
+<text text-anchor='middle' x='416' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='424' y='20' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='432' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='432' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='440' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='440' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='448' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='448' y='20' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='456' y='4' fill='currentColor' style='font-size:1em'>k</text>
+<text text-anchor='middle' x='456' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='464' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='464' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='472' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='472' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='480' y='4' fill='currentColor' style='font-size:1em'>,</text>
+<text text-anchor='middle' x='480' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='488' y='20' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='496' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='496' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='504' y='4' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='504' y='20' fill='currentColor' style='font-size:1em'>,</text>
+<text text-anchor='middle' x='512' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='520' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='520' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='528' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='528' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='536' y='4' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='536' y='20' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='544' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='552' y='20' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='560' y='20' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='576' y='20' fill='currentColor' style='font-size:1em'>→</text>
+<text text-anchor='middle' x='592' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='600' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='608' y='20' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='624' y='20' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='632' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='640' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='648' y='20' fill='currentColor' style='font-size:1em'>k</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>Java sits in the middle, which is exactly why it works as the hub for this series: to understand what a Spring controller is actually doing, you have to understand what arrived before it (a TCP connection accepted by the kernel, proxied by nginx) and what it hands off next (a connection pool, a transaction, an index lookup). Most &ldquo;backend&rdquo; explanations start and end at the application code. This one doesn&rsquo;t.</p>
+<h2 id="the-chain">The chain<a hidden class="anchor" aria-hidden="true" href="#the-chain">#</a></h2>
+<ol>
+<li><strong><a href="http://localhost:1313/java/javascript-in-the-browser/">JavaScript in the Browser</a></strong> — where the request is born: <code>fetch</code>, the event loop, and why the browser doesn&rsquo;t just block while waiting.</li>
+<li><strong><a href="http://localhost:1313/java/http-and-networking/">HTTP and Networking</a></strong> — DNS, TCP&rsquo;s handshake, TLS, and what an HTTP request actually looks like as bytes on the wire.</li>
+<li><strong><a href="http://localhost:1313/java/linux-process-socket-nginx/">Linux: Process, Socket, and Nginx</a></strong> — how the kernel turns a stream of bytes into something a server process can read, and why nginx sits in front of Java almost everywhere.</li>
+<li><strong><a href="http://localhost:1313/java/jvm-threads-and-spring/">Java and the JVM: Threads and Spring</a></strong> — the request lands in a thread pool, a <code>DispatcherServlet</code> routes it, and the JVM does a surprising amount of work you never asked for.</li>
+<li><strong><a href="http://localhost:1313/java/sql-connection-transaction-index/">SQL: Connection, Transaction, and Index</a></strong> — the request finally touches data: a pooled connection, a transaction boundary, and the index that decides if the query takes 2ms or 2s.</li>
+</ol>
+<p>Read them in order if you want the full trip, or jump straight to the layer you&rsquo;re debugging today. Each post assumes you know roughly what the other layers do, but not the details — that&rsquo;s the point of connecting them.</p>
+
+
+</div>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">JavaScript in the Browser: Where the Request Begins
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Before HTTP, before Java, before SQL — there’s a fetch() call sitting in an event loop. This is where our request’s journey begins.</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-01 09:00:00 -0300 -03'>October 1, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to JavaScript in the Browser: Where the Request Begins" href="http://localhost:1313/java/javascript-in-the-browser/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">HTTP and Networking: The Request Hits the Wire
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Between the browser and the server there’s no magic — just DNS, a TCP handshake, TLS, and a plain-text-ish protocol riding on top of all three.</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-01 09:10:00 -0300 -03'>October 1, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to HTTP and Networking: The Request Hits the Wire" href="http://localhost:1313/java/http-and-networking/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Linux: Process, Socket, and Nginx
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Before your Spring application sees anything, the kernel has already accepted a connection, handed it to a socket, and nginx has decided what to do with it.</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-01 09:20:00 -0300 -03'>October 1, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Linux: Process, Socket, and Nginx" href="http://localhost:1313/java/linux-process-socket-nginx/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Java and the JVM: Threads and Spring
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This is the hub of the series. The request is finally in your code — but it took a thread pool, a dispatcher, and a garbage collector you never call directly to get here.</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-01 09:30:00 -0300 -03'>October 1, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Java and the JVM: Threads and Spring" href="http://localhost:1313/java/jvm-threads-and-spring/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SQL: Connection, Transaction, and Index
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The last leg out, and the first leg back. This is where the request stops being abstract and starts touching actual rows on disk.</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-01 09:40:00 -0300 -03'>October 1, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to SQL: Connection, Transaction, and Index" href="http://localhost:1313/java/sql-connection-transaction-index/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Hussyvel Ribeiro | Tech Blog</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

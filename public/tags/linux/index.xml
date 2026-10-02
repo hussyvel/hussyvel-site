@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on Hussyvel Ribeiro | Tech Blog</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in Linux on Hussyvel Ribeiro | Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Oct 2026 09:20:00 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux: Process, Socket, and Nginx</title>
+      <link>http://localhost:1313/java/linux-process-socket-nginx/</link>
+      <pubDate>Thu, 01 Oct 2026 09:20:00 -0300</pubDate>
+      <guid>http://localhost:1313/java/linux-process-socket-nginx/</guid>
+      <description>How the Linux kernel turns a stream of bytes into something a server process can read, and why nginx sits in front of Java almost everywhere.</description>
+    </item>
+  </channel>
+</rss>

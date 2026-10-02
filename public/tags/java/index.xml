@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Java on Hussyvel Ribeiro | Tech Blog</title>
+    <link>http://localhost:1313/tags/java/</link>
+    <description>Recent content in Java on Hussyvel Ribeiro | Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Oct 2026 09:30:00 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java and the JVM: Threads and Spring</title>
+      <link>http://localhost:1313/java/jvm-threads-and-spring/</link>
+      <pubDate>Thu, 01 Oct 2026 09:30:00 -0300</pubDate>
+      <guid>http://localhost:1313/java/jvm-threads-and-spring/</guid>
+      <description>The request lands in a thread pool, a DispatcherServlet routes it, and the JVM does a surprising amount of work you never asked for.</description>
+    </item>
+  </channel>
+</rss>

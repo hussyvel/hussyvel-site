@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tls on Hussyvel Ribeiro | Tech Blog</title>
+    <link>http://localhost:1313/pt/tags/tls/</link>
+    <description>Recent content in Tls on Hussyvel Ribeiro | Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <lastBuildDate>Thu, 01 Oct 2026 09:10:00 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/tags/tls/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP e Rede: A Requisição Chega ao Fio</title>
+      <link>http://localhost:1313/pt/java/http-and-networking/</link>
+      <pubDate>Thu, 01 Oct 2026 09:10:00 -0300</pubDate>
+      <guid>http://localhost:1313/pt/java/http-and-networking/</guid>
+      <description>DNS, o handshake do TCP, TLS, e como é, na prática, uma requisição HTTP em bytes no fio.</description>
+    </item>
+  </channel>
+</rss>

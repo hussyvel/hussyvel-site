@@ -1,30 +1,16 @@
-baseURL = 'https://hussyvel.com/'
-languageCode = 'en-us'
-title = 'HUSSYVEL RIBEIRO'
-theme = 'PaperMod'
+# ==========================================
+# CONFIGURAÇÕES GLOBAIS
+# ==========================================
+baseURL = "https://hussyvel.com/"
+title = "Hussyvel Ribeiro"
+theme = "PaperMod"
+defaultContentLanguage = "en" # Define o Inglês como idioma padrão na raiz do site
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
 [params]
-  # Ativar e configurar o Profile Mode
-  [params.profileMode]
-    enabled = true
-    title = "Hi, I'm Hussyvel 👋"
-    subtitle = "Full Stack Software Developer | Java, GO, C, Javascript (Angular) and SQL"
-    
-    # Certifique-se de que coloca uma foto sua (profile.jpg) na pasta static/img/
-    imageUrl = "/img/perfil-linkedin2.jpeg" 
-    imageWidth = 150
-    imageHeight = 150
-    imageTitle = "Hussyvel Ribeiro"
-    
-    # Botões rápidos abaixo da foto
-    [[params.profileMode.buttons]]
-      name = "Read Posts"
-      url = "/posts/"
-    [[params.profileMode.buttons]]
-      name = "About Me"
-      url = "/about/"
-
-  # Ligações Sociais (GitHub e LinkedIn)
+  # Ícones globais (redes sociais são as mesmas para ambos os idiomas)
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/hussyvel"
@@ -32,25 +18,105 @@ theme = 'PaperMod'
     name = "linkedin"
     url = "https://www.linkedin.com/in/hussyvelribeiro"
 
-# Configuração do Menu de Navegação Superior
-[menu]
-  # Botão para os Artigos
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
+# ==========================================
+# IDIOMA 1: INGLÊS (Padrão)
+# ==========================================
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "Hussyvel Ribeiro | Tech Blog"
 
-  # Botão para as Categorias/Tags
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 20
+    [languages.en.params.profileMode]
+      enabled = true
+      title = "Hi, I'm Hussyvel 👋"
+      subtitle = "Full Stack Software Developer | Java, C, Javascript (Angular) and SQL"
+      imageUrl = "/perfil-linkedin2.jpeg" # Confirme se o nome da imagem está correto
+      imageWidth = 150
+      imageHeight = 150
 
-  # Botão para a página Sobre Mim
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 30
+      [[languages.en.params.profileMode.buttons]]
+        name = "Read Posts"
+        url = "/posts/"
+      [[languages.en.params.profileMode.buttons]]
+        name = "About Me"
+        url = "/about/"
+
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "/posts/"
+      weight = 10
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "/tags/"
+      weight = 20
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 30
+    [[languages.en.menu.main]]
+      identifier = "search"
+      name = "Search"
+      url = "/search/"
+      weight = 40
+
+
+    [[languages.en.menu.main]]
+      identifier = "resume"
+      name = "Resume"
+      pageRef = "/resume"
+      weight = 40
+     
+
+# ==========================================
+# IDIOMA 2: PORTUGUÊS
+# ==========================================
+  [languages.pt]
+    languageName = "Português"
+    weight = 2
+    title = "Hussyvel Ribeiro | Tech Blog"
+
+    [languages.pt.params.profileMode]
+      enabled = true
+      title = "Olá, sou o Hussyvel 👋"
+      subtitle = "Desenvolvedor de Software Full Stack | Java, C, Javascript (Angular) e SQL"
+      imageUrl = "/perfil-linkedin2.jpeg"
+      imageWidth = 150
+      imageHeight = 150
+
+      [[languages.pt.params.profileMode.buttons]]
+        name = "Ler Artigos"
+        url = "/pt/posts/"
+      [[languages.pt.params.profileMode.buttons]]
+        name = "Sobre Mim"
+        url = "/pt/about/"
+
+    [[languages.pt.menu.main]]
+      identifier = "posts"
+      name = "Artigos"
+      url = "/pt/posts/"
+      weight = 10
+    [[languages.pt.menu.main]]
+      identifier = "tags"
+      name = "Categorias"
+      url = "/pt/tags/"
+      weight = 20
+    [[languages.pt.menu.main]]
+      identifier = "about"
+      name = "Sobre Mim"
+      url = "/pt/about/"
+      weight = 30
+    [[languages.pt.menu.main]]
+      identifier = "search"
+      name = "Pesquisar"
+      url = "/pt/search/"
+      weight = 40
+
+    [[languages.pt.menu.main]]
+      identifier = "resume"
+      name = "Currículo"
+      pageRef = "/resume"
+      weight = 40

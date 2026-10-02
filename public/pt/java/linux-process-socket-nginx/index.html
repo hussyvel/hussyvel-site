@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Linux: Processo, Socket e Nginx | Hussyvel Ribeiro | Tech Blog</title>
+<meta name="keywords" content="linux, nginx, sockets, processos, série">
+<meta name="description" content="Como o kernel do Linux transforma um fluxo de bytes em algo que um processo de servidor consegue ler, e por que o nginx fica na frente do Java em quase todo lugar.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/pt/java/linux-process-socket-nginx/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.49db6240b4502d2bf11bd12ed435a8e077885b93ccbe4921107bdb637a79551f.css" integrity="sha256-SdtiQLRQLSvxG9Eu1DWo4HeIW5PMvkkhEHvbY3p5VR8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/java/linux-process-socket-nginx/">
+<link rel="alternate" hreflang="pt" href="http://localhost:1313/pt/java/linux-process-socket-nginx/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/pt/" accesskey="h" title="Hussyvel Ribeiro | Tech Blog (Alt + H)">Hussyvel Ribeiro | Tech Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button><span class="nav-sep">|</span>
+                    <ul class="lang-menu">
+                        <li>
+                            <a href="http://localhost:1313/" title="English"
+                                aria-label="English">En</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/pt/posts/" title="Artigos">
+                    <span>Artigos</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/pt/tags/" title="Categorias">
+                    <span>Categorias</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/pt/about/" title="Sobre Mim">
+                    <span>Sobre Mim</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/pt/" title="Currículo">
+                    <span>Currículo</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/pt/search/" title="Pesquisar">
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Linux: Processo, Socket e Nginx
+    </h1>
+    <div class="post-description">
+      Como o kernel do Linux transforma um fluxo de bytes em algo que um processo de servidor consegue ler, e por que o nginx fica na frente do Java em quase todo lugar.
+    </div>
+    <div class="post-meta">
+
+<span title='2026-10-01 09:20:00 -0300 -03'>1 de outubro de 2026</span>&nbsp;|&nbsp;<span>Traduções:</span>
+    <ul class="i18n_list">
+        <li>
+            <a href="http://localhost:1313/java/linux-process-socket-nginx/">En</a>
+        </li>
+    </ul>
+
+</div>
+  </header> <details class="toc" >
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Conteúdo</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#um-socket-%c3%a9-um-arquivo" aria-label="Um socket é um arquivo">Um socket é um arquivo</a></li>
+            <li>
+                <a href="#por-que-o-nginx-fica-na-frente-da-sua-aplica%c3%a7%c3%a3o-java" aria-label="Por que o nginx fica na frente da sua aplicação Java">Por que o nginx fica na frente da sua aplicação Java</a></li>
+            <li>
+                <a href="#processos-n%c3%a3o-m%c3%a1gica" aria-label="Processos, não mágica">Processos, não mágica</a></li>
+            <li>
+                <a href="#pra-onde-a-requisi%c3%a7%c3%a3o-vai-agora" aria-label="Pra onde a requisição vai agora">Pra onde a requisição vai agora</a>
+            </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><p>Terceiro post da série — <strong><a href="http://localhost:1313/pt/java/">comece pelo hub</a></strong>. O <a href="http://localhost:1313/pt/java/http-and-networking/">post anterior</a> terminou com uma conexão TCP carregando uma requisição HTTP chegando a um servidor. Este post é sobre o que acontece no instante em que ela pousa no Linux, antes de uma única linha de código Java rodar.</p>
+<h2 id="um-socket-é-um-arquivo">Um socket é um arquivo<a hidden class="anchor" aria-hidden="true" href="#um-socket-é-um-arquivo">#</a></h2>
+<p>No Linux, quase tudo é um descritor de arquivo, e conexões de rede não são exceção. Quando um processo quer aceitar conexões, ele:</p>
+<ol>
+<li>Cria um <strong>socket</strong> (<code>socket()</code>) — recebe de volta um descritor de arquivo.</li>
+<li>Faz o <strong>bind</strong> dele a um endereço e porta (<code>bind()</code>) — por exemplo, <code>0.0.0.0:443</code>.</li>
+<li>Coloca ele em <strong>listen</strong> (<code>listen()</code>) — avisa o kernel pra começar a enfileirar conexões que chegam.</li>
+<li><strong>Aceita</strong> conexões (<code>accept()</code>) — cada conexão aceita é <em>outro</em> descritor de arquivo, distinto do socket que está escutando.</li>
+</ol>
+<p>Isso importa porque explica uma confusão bem comum: o socket no qual seu servidor &ldquo;escuta&rdquo; e o socket que ele usa pra conversar com um cliente específico não são a mesma coisa. Um único socket de escuta pode gerar milhares de sockets de conexão individuais, cada um um descritor de arquivo separado que o kernel rastreia de forma independente — buffer de leitura, buffer de escrita, estado do TCP, tudo isso.</p>
+<h2 id="por-que-o-nginx-fica-na-frente-da-sua-aplicação-java">Por que o nginx fica na frente da sua aplicação Java<a hidden class="anchor" aria-hidden="true" href="#por-que-o-nginx-fica-na-frente-da-sua-aplicação-java">#</a></h2>
+<p>Num deploy típico (estilo SEMA, e na maioria dos setups Java em produção), o processo que de fato está vinculado à porta 443 <strong>não é</strong> a aplicação Java — é o nginx. Sua aplicação Spring Boot, implantada no Tomcat, geralmente escuta em algo como <code>localhost:8080</code>, inacessível diretamente pela internet. O nginx fica na frente e faz proxy reverso pra ela:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">443</span> <span style="color:#e6db74">ssl</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">server_name</span> <span style="color:#e6db74">api.example.com</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">proxy_pass</span> <span style="color:#e6db74">http://127.0.0.1:8080</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">proxy_set_header</span> <span style="color:#e6db74">Host</span> $host;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">proxy_set_header</span> <span style="color:#e6db74">X-Real-IP</span> $remote_addr;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Isso não é burocracia por burocracia. O nginx está fazendo trabalho de verdade que a JVM faz, comparativamente, pior:</p>
+<ul>
+<li><strong>Terminar o TLS</strong> — o handshake caro do <a href="http://localhost:1313/pt/java/http-and-networking/">post anterior</a> acontece aqui, uma vez, em vez de dentro da JVM.</li>
+<li><strong>Servir arquivos estáticos</strong> diretamente, sem acordar uma thread Java pra um arquivo <code>.css</code>.</li>
+<li><strong>Bufferizar clientes lentos</strong> — o nginx consegue absorver um cliente que manda bytes aos poucos, em vez de prender uma thread do Tomcat esperando por ele.</li>
+<li><strong>Balancear carga</strong> entre múltiplas instâncias do backend, e atuar como ponto único pra rate limiting, compressão e logs de acesso.</li>
+</ul>
+<p>Do ponto de vista da JVM, toda requisição que ela recebe nesse cenário na verdade se originou como uma <em>conexão nova e separada vinda do nginx</em>, não diretamente do cliente original. É por isso que existem os headers <code>X-Forwarded-For</code> e <code>X-Real-IP</code> — sem eles, seu código Java acharia que toda requisição veio de <code>127.0.0.1</code>.</p>
+<h2 id="processos-não-mágica">Processos, não mágica<a hidden class="anchor" aria-hidden="true" href="#processos-não-mágica">#</a></h2>
+<p>Tanto o nginx quanto a JVM rodando sua aplicação Spring são processos Linux comuns — visíveis no <code>ps</code>, escalonáveis pelo kernel, cada um com seu próprio espaço de memória, tabela de descritores de arquivo e conjunto de threads. Quando o nginx faz proxy de uma requisição, é literalmente isto: ler bytes do descritor de arquivo conectado ao cliente, escrever (basicamente) os mesmos bytes em outro descritor de arquivo conectado a <code>127.0.0.1:8080</code>. O escalonador do kernel decide quando as threads de cada processo realmente rodam num núcleo de CPU — não existe tratamento especial pro &ldquo;servidor web&rdquo; em relação a qualquer outro processo.</p>
+<p>É também por isso que limites de recursos importam de um jeito que surpreende quem vem de linguagens de mais alto nível: um processo Linux tem um limite de descritores de arquivo abertos (<code>ulimit -n</code>), e toda conexão aberta — cliente-pro-nginx, nginx-pro-Tomcat, Tomcat-pro-banco — consome um. Bata nesse limite sob carga, e você recebe erros de <code>Too many open files</code> que não têm nada a ver com a lógica da sua aplicação.</p>
+<h2 id="pra-onde-a-requisição-vai-agora">Pra onde a requisição vai agora<a hidden class="anchor" aria-hidden="true" href="#pra-onde-a-requisição-vai-agora">#</a></h2>
+<p>O fluxo de bytes que o nginx repassou pra <code>127.0.0.1:8080</code> agora está sentado num socket que pertence ao processo da JVM — mais especificamente, ao pool de threads do conector do Tomcat. O que acontece no instante em que o Tomcat lê esses bytes — como ele os transforma num <code>HttpServletRequest</code>, entrega pra uma thread, e como o Spring roteia o trabalho dessa thread pro seu controller — é onde o próprio modelo de concorrência da JVM assume o controle.</p>
+<p><strong>Próximo: <a href="http://localhost:1313/pt/java/jvm-threads-and-spring/">Java e a JVM: Threads e Spring</a></strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/pt/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/pt/tags/nginx/">Nginx</a></li>
+      <li><a href="http://localhost:1313/pt/tags/sockets/">Sockets</a></li>
+      <li><a href="http://localhost:1313/pt/tags/processos/">Processos</a></li>
+      <li><a href="http://localhost:1313/pt/tags/s%C3%A9rie/">Série</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/pt/">Hussyvel Ribeiro | Tech Blog</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
