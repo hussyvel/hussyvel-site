@@ -1,16 +1,11 @@
-# ==========================================
-# CONFIGURAÇÕES GLOBAIS
-# ==========================================
 baseURL = "https://hussyvel.com/"
-title = "Hussyvel Ribeiro"
 theme = "PaperMod"
-defaultContentLanguage = "en" # Define o Inglês como idioma padrão na raiz do site
+defaultContentLanguage = "en"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  # Ícones globais (redes sociais são as mesmas para ambos os idiomas)
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/hussyvel"
@@ -18,10 +13,10 @@ defaultContentLanguage = "en" # Define o Inglês como idioma padrão na raiz do 
     name = "linkedin"
     url = "https://www.linkedin.com/in/hussyvelribeiro"
 
-# ==========================================
-# IDIOMA 1: INGLÊS (Padrão)
-# ==========================================
 [languages]
+  # ==========================================
+  # IDIOMA 1: INGLÊS (Padrão)
+  # ==========================================
   [languages.en]
     languageName = "English"
     weight = 1
@@ -30,117 +25,193 @@ defaultContentLanguage = "en" # Define o Inglês como idioma padrão na raiz do 
     [languages.en.params.profileMode]
       enabled = true
       title = "Hi, I'm Hussyvel 👋"
-      subtitle = "Full Stack Software Developer | Java, C, Javascript (Angular) and SQL"
-      imageUrl = "/perfil-linkedin2.jpeg" # Confirme se o nome da imagem está correto
+      subtitle = "Full Stack Software Developer | Java, GO, C, Javascript (Angular) and SQL"
+      imageUrl = "/img/perfil-linkedin2.jpeg"
       imageWidth = 150
       imageHeight = 150
 
-      [[languages.en.params.profileMode.buttons]]
-        name = "Read Posts"
-        url = "/posts/"
-      [[languages.en.params.profileMode.buttons]]
-        name = "About Me"
-        url = "/about/"
-      [[languages.en.params.profileMode.buttons]]
-        name = "Java"
-        url = "/java/"
-      [[languages.en.params.profileMode.buttons]]
-        name = "JavaScript"
-        url = "/javascript/"
-      [[languages.en.params.profileMode.buttons]]
-        name = "SQL"
-        url = "/sql/"
-      [[languages.en.params.profileMode.buttons]]
-        name = "Linux"
-        url = "/linux/"
-
-    [[languages.en.menu.main]]
+[[languages.en.menu.main]]
       identifier = "posts"
       name = "Posts"
       url = "/posts/"
       weight = 10
-    [[languages.en.menu.main]]
-      identifier = "tags"
-      name = "Tags"
-      url = "/tags/"
-      weight = 20
+
     [[languages.en.menu.main]]
       identifier = "about"
       name = "About"
       url = "/about/"
-      weight = 30
+      weight = 20
+
     [[languages.en.menu.main]]
-      identifier = "search"
-      name = "Search"
-      url = "/search/"
+      identifier = "java"
+      name = "Java"
+      url = "/java/"
+      weight = 30
+
+    [[languages.en.menu.main]]
+      identifier = "javascript"
+      name = "Javascript"
+      url = "/javascript/"
       weight = 40
 
+    [[languages.en.menu.main]]
+      identifier = "c-lang"
+      name = "C"
+      url = "/c/"
+      weight = 50
+
+    [[languages.en.menu.main]]
+      identifier = "go"
+      name = "GO"
+      url = "/go/"
+      weight = 60
+
+    [[languages.en.menu.main]]
+      identifier = "sql"
+      name = "SQL"
+      url = "/sql/"
+      weight = 70
+
+    [[languages.en.menu.main]]
+      identifier = "git"
+      name = "Git"
+      url = "/git/"
+      weight = 80
+
+    [[languages.en.menu.main]]
+      identifier = "linux"
+      name = "Linux"
+      url = "/linux/"
+      weight = 90
+
+    [[languages.en.menu.main]]
+      identifier = "redes"
+      name = "Networking" # Em inglês fica melhor "Networking", mas a pasta pode ser /redes/
+      url = "/redes/"
+      weight = 100
+
+    [[languages.en.menu.main]]
+      identifier = "hardware"
+      name = "Hardware"
+      url = "/hardware/"
+      weight = 110
+
+    [[languages.pt.menu.main]]
+      identifier = "AWS"
+      name = "AWS"
+      url = "/aws/"
+      weight = 120
+
+    [[languages.pt.menu.main]]
+      identifier = "Services"
+      name = "Services"
+      url = "/services/"
+      weight = 130
 
     [[languages.en.menu.main]]
       identifier = "resume"
-      name = "Resume"
-      pageRef = "/resume"
-      weight = 40
-     
+      name = "Resume" # Na área de tecnologia em inglês, "Resume" é mais usado que "Curriculum"
+      url = "/resume/"
+      weight = 140
+    
+    
 
-# ==========================================
-# IDIOMA 2: PORTUGUÊS
-# ==========================================
+  # ==========================================
+  # IDIOMA 2: PORTUGUÊS
+  # ==========================================
   [languages.pt]
     languageName = "Português"
     weight = 2
-    title = "Hussyvel Ribeiro | Tech Blog"
+    title = "Hussyvel Ribeiro | Blog de Tecnologia"
 
     [languages.pt.params.profileMode]
       enabled = true
       title = "Olá, sou o Hussyvel 👋"
-      subtitle = "Desenvolvedor de Software Full Stack | Java, C, Javascript (Angular) e SQL"
-      imageUrl = "/perfil-linkedin2.jpeg"
+      subtitle = "Desenvolvedor de Software Full Stack | Java, GO, C, Javascript (Angular) e SQL"
+      imageUrl = "/img/perfil-linkedin2.jpeg"
       imageWidth = 150
       imageHeight = 150
 
-      [[languages.pt.params.profileMode.buttons]]
-        name = "Ler Artigos"
-        url = "/pt/posts/"
-      [[languages.pt.params.profileMode.buttons]]
-        name = "Sobre Mim"
-        url = "/pt/about/"
-      [[languages.pt.params.profileMode.buttons]]
-        name = "Java"
-        url = "/pt/java/"
-      [[languages.pt.params.profileMode.buttons]]
-        name = "JavaScript"
-        url = "/pt/javascript/"
-      [[languages.pt.params.profileMode.buttons]]
-        name = "SQL"
-        url = "/pt/sql/"
-      [[languages.pt.params.profileMode.buttons]]
-        name = "Linux"
-        url = "/pt/linux/"
-
-    [[languages.pt.menu.main]]
+[[languages.pt.menu.main]]
       identifier = "posts"
       name = "Artigos"
       url = "/pt/posts/"
       weight = 10
-    [[languages.pt.menu.main]]
-      identifier = "tags"
-      name = "Categorias"
-      url = "/pt/tags/"
-      weight = 20
+
     [[languages.pt.menu.main]]
       identifier = "about"
       name = "Sobre Mim"
       url = "/pt/about/"
-      weight = 30
+      weight = 20
+
     [[languages.pt.menu.main]]
-      identifier = "search"
-      name = "Pesquisar"
-      url = "/pt/search/"
+      identifier = "java"
+      name = "Java"
+      url = "/pt/java/"
+      weight = 30
+
+    [[languages.pt.menu.main]]
+      identifier = "javascript"
+      name = "Javascript"
+      url = "/pt/javascript/"
       weight = 40
+
+    [[languages.pt.menu.main]]
+      identifier = "c-lang"
+      name = "C"
+      url = "/pt/c/"
+      weight = 50
+
+    [[languages.pt.menu.main]]
+      identifier = "go"
+      name = "GO"
+      url = "/pt/go/"
+      weight = 60
+
+    [[languages.pt.menu.main]]
+      identifier = "sql"
+      name = "SQL"
+      url = "/pt/sql/"
+      weight = 70
+
+    [[languages.pt.menu.main]]
+      identifier = "git"
+      name = "Git"
+      url = "/pt/git/"
+      weight = 80
+
+    [[languages.pt.menu.main]]
+      identifier = "linux"
+      name = "Linux"
+      url = "/pt/linux/"
+      weight = 90
+
+    [[languages.pt.menu.main]]
+      identifier = "redes"
+      name = "Redes"
+      url = "/pt/redes/"
+      weight = 100
+
+    [[languages.pt.menu.main]]
+      identifier = "hardware"
+      name = "Hardware"
+      url = "/pt/hardware/"
+      weight = 110
+
+     [[languages.pt.menu.main]]
+      identifier = "AWS"
+      name = "AWS"
+      url = "/pt/aws/"
+      weight = 120
+
+      [[languages.pt.menu.main]]
+      identifier = "services"
+      name = "Serviços"
+      url = "/pt/services/"
+      weight = 130
 
     [[languages.pt.menu.main]]
       identifier = "resume"
       name = "Currículo"
-      pageRef = "/resume"
-      weight = 40
+      url = "/pt/resume/"
+      weight = 140

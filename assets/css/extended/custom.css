@@ -13,14 +13,36 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--theme-font) !important;
 }
 
-/* Botões do perfil (home) empilhados em coluna, pra facilitar o acesso às seções */
-.profile .buttons {
-    flex-direction: column;
-    width: 100%;
-    max-width: 280px;
+/* Palavras-chave (tags) nas entradas do Arquivo, estilo #hashtag */
+.archive-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
 }
 
-.profile .buttons .button {
-    width: 100%;
-    text-align: center;
+.archive-tags li {
+    display: inline-block;
+}
+
+.archive-tags a {
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+.archive-tags a::before {
+    content: "#";
+}
+
+.archive-tags a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+/* Menu quebra em várias linhas em vez de gerar barra de rolagem horizontal */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    white-space: normal;
+    row-gap: 4px;
 }
