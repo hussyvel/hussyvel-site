@@ -46,3 +46,26 @@ h1, h2, h3, h4, h5, h6 {
     white-space: normal;
     row-gap: 4px;
 }
+
+/* Barra de busca centralizada abaixo do menu */
+.header-search {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0 4px;
+}
+
+.header-search input {
+    width: 100%;
+    max-width: 420px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: var(--primary);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    outline: none;
+}
+
+.header-search input:focus {
+    border-color: var(--secondary);
+}

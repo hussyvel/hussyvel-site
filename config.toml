@@ -96,13 +96,13 @@ defaultContentLanguage = "en"
       url = "/hardware/"
       weight = 110
 
-    [[languages.pt.menu.main]]
+    [[languages.en.menu.main]]
       identifier = "AWS"
       name = "AWS"
       url = "/aws/"
       weight = 120
 
-    [[languages.pt.menu.main]]
+    [[languages.en.menu.main]]
       identifier = "Services"
       name = "Services"
       url = "/services/"

@@ -1,0 +1,19 @@
+{{- if eq .Layout "search" }}
+<script>
+  // Preenche a busca com ?q= vindo da barra do cabeçalho
+  (function () {
+    var q = new URLSearchParams(location.search).get('q');
+    if (!q) return;
+    var input = document.getElementById('searchInput');
+    if (!input) return;
+    var tries = 0;
+    var timer = setInterval(function () {
+      if (!input.disabled || ++tries > 50) {
+        clearInterval(timer);
+        input.value = q;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    }, 100);
+  })();
+</script>
+{{- end }}
