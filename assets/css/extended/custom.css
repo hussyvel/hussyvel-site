@@ -12,3 +12,15 @@ body,
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--theme-font) !important;
 }
+
+/* Botões do perfil (home) empilhados em coluna, pra facilitar o acesso às seções */
+.profile .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+}
+
+.profile .buttons .button {
+    width: 100%;
+    text-align: center;
+}

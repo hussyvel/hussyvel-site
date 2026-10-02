@@ -41,6 +41,18 @@ defaultContentLanguage = "en" # Define o Inglês como idioma padrão na raiz do 
       [[languages.en.params.profileMode.buttons]]
         name = "About Me"
         url = "/about/"
+      [[languages.en.params.profileMode.buttons]]
+        name = "Java"
+        url = "/java/"
+      [[languages.en.params.profileMode.buttons]]
+        name = "JavaScript"
+        url = "/javascript/"
+      [[languages.en.params.profileMode.buttons]]
+        name = "SQL"
+        url = "/sql/"
+      [[languages.en.params.profileMode.buttons]]
+        name = "Linux"
+        url = "/linux/"
 
     [[languages.en.menu.main]]
       identifier = "posts"
@@ -93,6 +105,18 @@ defaultContentLanguage = "en" # Define o Inglês como idioma padrão na raiz do 
       [[languages.pt.params.profileMode.buttons]]
         name = "Sobre Mim"
         url = "/pt/about/"
+      [[languages.pt.params.profileMode.buttons]]
+        name = "Java"
+        url = "/pt/java/"
+      [[languages.pt.params.profileMode.buttons]]
+        name = "JavaScript"
+        url = "/pt/javascript/"
+      [[languages.pt.params.profileMode.buttons]]
+        name = "SQL"
+        url = "/pt/sql/"
+      [[languages.pt.params.profileMode.buttons]]
+        name = "Linux"
+        url = "/pt/linux/"
 
     [[languages.pt.menu.main]]
       identifier = "posts"
