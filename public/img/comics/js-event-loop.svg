@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 336" width="100%" height="auto" role="img" aria-label="JS event loop comic">
+<title>JS event loop comic</title>
+<rect x="0" y="0" width="900" height="336" fill="#fffdf7"/>
+<rect x="5" y="0" width="290" height="300" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<rect x="305" y="0" width="290" height="300" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<rect x="605" y="0" width="290" height="300" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<rect x="25" y="18" width="64" height="46" rx="4" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<line x1="57" y1="64" x2="57" y2="76" stroke="#1a1a1a" stroke-width="3"/>
+<line x1="41" y1="76" x2="73" y2="76" stroke="#1a1a1a" stroke-width="3"/>
+<line x1="35" y1="28" x2="79" y2="54" stroke="#c0392b" stroke-width="3"/>
+<line x1="79" y1="28" x2="35" y2="54" stroke="#c0392b" stroke-width="3"/>
+<g transform="translate(155,270)"><line x1="0" y1="-40.0" x2="-18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-40.0" x2="18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-104.0" x2="0" y2="-40.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="-28.0" y2="-95.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="28.0" y2="-95.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<circle cx="0" cy="-120.0" r="16.0" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3.0"/></g>
+<polygon points="145,153 167,153 153,177" fill="white" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/><rect x="146" y="149" width="20" height="8" fill="white"/><rect x="45" y="95" width="210" height="60" rx="14" fill="white" stroke="#1a1a1a" stroke-width="2.5"/><text font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-size="15" font-weight="normal" fill="#1a1a1a" text-anchor="middle"><tspan x="150.0" y="120.0">fetch() isn't</tspan><tspan x="150.0" y="140.0">working!!</tspan></text>
+<g transform="translate(455,270)"><line x1="0" y1="-40.0" x2="-18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-40.0" x2="18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-104.0" x2="0" y2="-40.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="-22.0" y2="-50.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="22.0" y2="-50.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<circle cx="0" cy="-120.0" r="16.0" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3.0"/></g>
+<text x="455" y="250" font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle" letter-spacing="1">THE EVENT LOOP</text>
+<polygon points="445,118 467,118 453,142" fill="white" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/><rect x="446" y="114" width="20" height="8" fill="white"/><rect x="340" y="60" width="220" height="60" rx="14" fill="white" stroke="#1a1a1a" stroke-width="2.5"/><text font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-size="14" font-weight="normal" fill="#1a1a1a" text-anchor="middle"><tspan x="450.0" y="85.16666666666667">Your promise resolved</tspan><tspan x="450.0" y="104.16666666666667">4ms ago, chief.</tspan></text>
+<g transform="translate(755,270)"><line x1="0" y1="-40.0" x2="-18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-40.0" x2="18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-104.0" x2="0" y2="-40.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="-22.0" y2="-50.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="14.0" y2="-116.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<circle cx="0" cy="-120.0" r="16.0" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3.0"/></g>
+<polygon points="745,153 767,153 753,177" fill="white" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/><rect x="746" y="149" width="20" height="8" fill="white"/><rect x="650" y="95" width="200" height="60" rx="14" fill="white" stroke="#1a1a1a" stroke-width="2.5"/><text font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-size="15" font-weight="normal" fill="#1a1a1a" text-anchor="middle"><tspan x="750.0" y="120.0">...I forgot</tspan><tspan x="750.0" y="140.0">the await.</tspan></text>
+<text x="450.0" y="324" font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-style="italic" font-size="15" fill="#1a1a1a" text-anchor="middle">Every. Single. Time.</text>
+</svg>

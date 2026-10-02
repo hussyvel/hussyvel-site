@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Dns on Hussyvel Ribeiro | Tech Blog</title>
-    <link>http://localhost:1313/tags/dns/</link>
+    <link>http://localhost:43699/tags/dns/</link>
     <description>Recent content in Dns on Hussyvel Ribeiro | Tech Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 01 Oct 2026 09:10:00 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:43699/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTTP and Networking: The Request Hits the Wire</title>
-      <link>http://localhost:1313/java/http-and-networking/</link>
+      <link>http://localhost:43699/java/http-and-networking/</link>
       <pubDate>Thu, 01 Oct 2026 09:10:00 -0300</pubDate>
-      <guid>http://localhost:1313/java/http-and-networking/</guid>
+      <guid>http://localhost:43699/java/http-and-networking/</guid>
       <description>DNS, TCP&amp;#39;s handshake, TLS, and what an HTTP request actually looks like as bytes on the wire.</description>
     </item>
   </channel>

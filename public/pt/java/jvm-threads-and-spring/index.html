@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=43699&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -9,17 +9,17 @@
 <meta name="keywords" content="java, jvm, threads, spring, série">
 <meta name="description" content="A requisição cai num thread pool, o DispatcherServlet faz o roteamento, e a JVM faz uma quantidade surpreendente de trabalho que você nunca pediu.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/pt/java/jvm-threads-and-spring/">
+<link rel="canonical" href="http://localhost:43699/pt/java/jvm-threads-and-spring/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.49db6240b4502d2bf11bd12ed435a8e077885b93ccbe4921107bdb637a79551f.css" integrity="sha256-SdtiQLRQLSvxG9Eu1DWo4HeIW5PMvkkhEHvbY3p5VR8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:43699/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:43699/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:43699/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:43699/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:43699/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/java/jvm-threads-and-spring/">
-<link rel="alternate" hreflang="pt" href="http://localhost:1313/pt/java/jvm-threads-and-spring/">
+<link rel="alternate" hreflang="en" href="http://localhost:43699/java/jvm-threads-and-spring/">
+<link rel="alternate" hreflang="pt" href="http://localhost:43699/pt/java/jvm-threads-and-spring/">
 <noscript>
     <style>
         #theme-toggle,
@@ -71,7 +71,7 @@
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/pt/" accesskey="h" title="Hussyvel Ribeiro | Tech Blog (Alt + H)">Hussyvel Ribeiro | Tech Blog</a>
+            <a href="http://localhost:43699/pt/" accesskey="h" title="Hussyvel Ribeiro | Tech Blog (Alt + H)">Hussyvel Ribeiro | Tech Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -95,7 +95,7 @@
                 </button><span class="nav-sep">|</span>
                     <ul class="lang-menu">
                         <li>
-                            <a href="http://localhost:1313/" title="English"
+                            <a href="http://localhost:43699/" title="English"
                                 aria-label="English">En</a>
                         </li>
                     </ul>
@@ -103,27 +103,27 @@
         </div>
         <ul id="menu" class="menu">
             <li>
-                <a href="http://localhost:1313/pt/posts/" title="Artigos">
+                <a href="http://localhost:43699/pt/posts/" title="Artigos">
                     <span>Artigos</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/tags/" title="Categorias">
+                <a href="http://localhost:43699/pt/tags/" title="Categorias">
                     <span>Categorias</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/about/" title="Sobre Mim">
+                <a href="http://localhost:43699/pt/about/" title="Sobre Mim">
                     <span>Sobre Mim</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/" title="Currículo">
+                <a href="http://localhost:43699/pt/" title="Currículo">
                     <span>Currículo</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/search/" title="Pesquisar">
+                <a href="http://localhost:43699/pt/search/" title="Pesquisar">
                     <span>Pesquisar</span>
                 </a>
             </li>
@@ -146,7 +146,7 @@
 <span title='2026-10-01 09:30:00 -0300 -03'>1 de outubro de 2026</span>&nbsp;|&nbsp;<span>Traduções:</span>
     <ul class="i18n_list">
         <li>
-            <a href="http://localhost:1313/java/jvm-threads-and-spring/">En</a>
+            <a href="http://localhost:43699/java/jvm-threads-and-spring/">En</a>
         </li>
     </ul>
 
@@ -172,12 +172,13 @@
     </div>
 </details>
 
-  <div class="post-content md-content"><p>Quarto post, e o centro desta série — <strong><a href="http://localhost:1313/pt/java/">veja a cadeia completa</a></strong>. O <a href="http://localhost:1313/pt/java/linux-process-socket-nginx/">post anterior</a> parou com bytes sentados num socket que pertence ao processo da JVM. É aqui que eles finalmente viram algo parecido com &ldquo;o seu código&rdquo;.</p>
+  <div class="post-content md-content"><p>Quarto post, e o centro desta série — <strong><a href="http://localhost:43699/pt/java/">veja a cadeia completa</a></strong>. O <a href="http://localhost:43699/pt/java/linux-process-socket-nginx/">post anterior</a> parou com bytes sentados num socket que pertence ao processo da JVM. É aqui que eles finalmente viram algo parecido com &ldquo;o seu código&rdquo;.</p>
 <h2 id="o-thread-pool-do-tomcat-a-primeira-decisão-no-nível-da-jvm">O thread pool do Tomcat: a primeira decisão no nível da JVM<a hidden class="anchor" aria-hidden="true" href="#o-thread-pool-do-tomcat-a-primeira-decisão-no-nível-da-jvm">#</a></h2>
 <p>O Tomcat embutido do Spring Boot não cria uma nova thread do sistema operacional por requisição indefinidamente — ele mantém um <strong>thread pool</strong> limitado (<code>server.tomcat.threads.max</code>, padrão 200). Uma thread do conector aceita a conexão, interpreta os bytes crus em um <code>HttpServletRequest</code>, e repassa a execução pra uma thread trabalhadora desse pool.</p>
-<p>Esse limite não é um ajuste de performance que você pode ignorar — é um teto rígido de concorrência. Se as 200 threads estiverem ocupadas (digamos, cada uma bloqueada esperando uma consulta lenta no banco), a requisição número 201 entra na fila. É exatamente por isso que uma consulta SQL lenta — do tipo que o <a href="http://localhost:1313/pt/java/sql-connection-transaction-index/">último post desta série</a> trata diretamente — não deixa lenta só <em>aquela</em> requisição. Ela pode esgotar o thread pool e deixar a aplicação inteira sem resposta, até pra requisições que nem tocam no banco.</p>
+<p>Esse limite não é um ajuste de performance que você pode ignorar — é um teto rígido de concorrência. Se as 200 threads estiverem ocupadas (digamos, cada uma bloqueada esperando uma consulta lenta no banco), a requisição número 201 entra na fila. É exatamente por isso que uma consulta SQL lenta — do tipo que o <a href="http://localhost:43699/pt/java/sql-connection-transaction-index/">último post desta série</a> trata diretamente — não deixa lenta só <em>aquela</em> requisição. Ela pode esgotar o thread pool e deixar a aplicação inteira sem resposta, até pra requisições que nem tocam no banco.</p>
+<p><img alt="Tirinha: um desenvolvedor em pânico porque tudo está lento, até o health check, e descobre que uma única consulta lenta está bloqueando as 200 threads do pool" loading="lazy" src="/img/comics/thread-pool-exhausted.pt.svg"></p>
 <h2 id="a-thread-da-jvm-não-a-thread-do-sistema-operacional">A thread da JVM, não a thread do sistema operacional<a hidden class="anchor" aria-hidden="true" href="#a-thread-da-jvm-não-a-thread-do-sistema-operacional">#</a></h2>
-<p>Vale ser preciso aqui: uma <code>Thread</code> do Java é, na JVM HotSpot padrão (antes do Project Loom/virtual threads), um invólucro fino em torno de uma thread nativa do sistema operacional. Quando a thread trabalhadora do Tomcat bloqueia numa chamada JDBC esperando o banco de dados, ela não está fazendo nenhum escalonamento cooperativo esperto — ela está genuinamente estacionando uma thread do SO, que o escalonador do kernel Linux simplesmente não executa até que o I/O termine. Essa é a ligação direta e nada glamourosa com o <a href="http://localhost:1313/pt/java/linux-process-socket-nginx/">modelo de processos e escalonamento</a> do post anterior: o modelo de concorrência do Java, no Spring MVC tradicional (não reativo), roda inteiramente em cima de threads do sistema operacional e I/O bloqueante.</p>
+<p>Vale ser preciso aqui: uma <code>Thread</code> do Java é, na JVM HotSpot padrão (antes do Project Loom/virtual threads), um invólucro fino em torno de uma thread nativa do sistema operacional. Quando a thread trabalhadora do Tomcat bloqueia numa chamada JDBC esperando o banco de dados, ela não está fazendo nenhum escalonamento cooperativo esperto — ela está genuinamente estacionando uma thread do SO, que o escalonador do kernel Linux simplesmente não executa até que o I/O termine. Essa é a ligação direta e nada glamourosa com o <a href="http://localhost:43699/pt/java/linux-process-socket-nginx/">modelo de processos e escalonamento</a> do post anterior: o modelo de concorrência do Java, no Spring MVC tradicional (não reativo), roda inteiramente em cima de threads do sistema operacional e I/O bloqueante.</p>
 
 
 
@@ -473,7 +474,7 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ResponseEntity.<span style="color:#a6e22e">ok</span>(orderService.<span style="color:#a6e22e">findById</span>(id));
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>O <code>DispatcherServlet</code> casa o <code>GET /orders/42</code> recebido com os handler mappings registrados, resolve os argumentos do método (<code>@PathVariable Long id</code> é extraído direto da URL), executa interceptors ou filters configurados (é aqui que, geralmente, autenticação, log e — fazendo a ponte com o <a href="http://localhost:1313/pt/java/javascript-in-the-browser/">post sobre JavaScript</a> — os headers de CORS são aplicados), e por fim invoca o método do seu controller na thread atual. Por padrão, não existe nenhuma troca de thread adicional aqui: a mesma thread trabalhadora que o Tomcat entregou a requisição é a que executa sua lógica de negócio.</p>
+</span></span></code></pre></div><p>O <code>DispatcherServlet</code> casa o <code>GET /orders/42</code> recebido com os handler mappings registrados, resolve os argumentos do método (<code>@PathVariable Long id</code> é extraído direto da URL), executa interceptors ou filters configurados (é aqui que, geralmente, autenticação, log e — fazendo a ponte com o <a href="http://localhost:43699/pt/java/javascript-in-the-browser/">post sobre JavaScript</a> — os headers de CORS são aplicados), e por fim invoca o método do seu controller na thread atual. Por padrão, não existe nenhuma troca de thread adicional aqui: a mesma thread trabalhadora que o Tomcat entregou a requisição é a que executa sua lógica de negócio.</p>
 <h2 id="o-que-a-jvm-faz-que-você-não-pediu">O que a JVM faz que você não pediu<a hidden class="anchor" aria-hidden="true" href="#o-que-a-jvm-faz-que-você-não-pediu">#</a></h2>
 <p>Enquanto o código do seu controller e service roda, a própria JVM está fazendo trabalho que você nunca invoca explicitamente:</p>
 <ul>
@@ -483,25 +484,25 @@
 </ul>
 <h2 id="repassando-pro-banco-de-dados">Repassando pro banco de dados<a hidden class="anchor" aria-hidden="true" href="#repassando-pro-banco-de-dados">#</a></h2>
 <p>Quando <code>orderService.findById(id)</code> precisa de dados, ele não abre uma conexão TCP nova com o Postgres ou MariaDB a cada chamada — ele pega uma emprestada de um pool de conexões (o HikariCP, padrão do Spring Boot), executa o SQL nela, e devolve quando termina. Essa passagem de bastão — uma conexão vinda de um pool, uma fronteira de transação, e o índice que o banco usa (ou deixa de usar) pra atender a consulta — é o último trecho da jornada de ida.</p>
-<p><strong>Próximo: <a href="http://localhost:1313/pt/java/sql-connection-transaction-index/">SQL: Conexão, Transação e Índice</a></strong></p>
+<p><strong>Próximo: <a href="http://localhost:43699/pt/java/sql-connection-transaction-index/">SQL: Conexão, Transação e Índice</a></strong></p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/pt/tags/java/">Java</a></li>
-      <li><a href="http://localhost:1313/pt/tags/jvm/">Jvm</a></li>
-      <li><a href="http://localhost:1313/pt/tags/threads/">Threads</a></li>
-      <li><a href="http://localhost:1313/pt/tags/spring/">Spring</a></li>
-      <li><a href="http://localhost:1313/pt/tags/s%C3%A9rie/">Série</a></li>
+      <li><a href="http://localhost:43699/pt/tags/java/">Java</a></li>
+      <li><a href="http://localhost:43699/pt/tags/jvm/">Jvm</a></li>
+      <li><a href="http://localhost:43699/pt/tags/threads/">Threads</a></li>
+      <li><a href="http://localhost:43699/pt/tags/spring/">Spring</a></li>
+      <li><a href="http://localhost:43699/pt/tags/s%C3%A9rie/">Série</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/pt/">Hussyvel Ribeiro | Tech Blog</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:43699/pt/">Hussyvel Ribeiro | Tech Blog</a></span> · 
 
     
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Postgresql on Hussyvel Ribeiro | Tech Blog</title>
-    <link>http://localhost:1313/pt/tags/postgresql/</link>
+    <link>http://localhost:43699/pt/tags/postgresql/</link>
     <description>Recent content in Postgresql on Hussyvel Ribeiro | Tech Blog</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Thu, 01 Oct 2026 09:40:00 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/pt/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:43699/pt/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL: Conexão, Transação e Índice</title>
-      <link>http://localhost:1313/pt/java/sql-connection-transaction-index/</link>
+      <link>http://localhost:43699/pt/java/sql-connection-transaction-index/</link>
       <pubDate>Thu, 01 Oct 2026 09:40:00 -0300</pubDate>
-      <guid>http://localhost:1313/pt/java/sql-connection-transaction-index/</guid>
+      <guid>http://localhost:43699/pt/java/sql-connection-transaction-index/</guid>
       <description>A requisição finalmente toca os dados: uma conexão vinda de um pool, uma transação com fronteiras bem definidas, e o índice que decide se a consulta leva 2ms ou 2s.</description>
     </item>
   </channel>

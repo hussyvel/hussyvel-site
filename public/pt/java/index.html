@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -9,18 +9,18 @@
 <meta name="keywords" content="">
 <meta name="description" content="Java como hub da jornada de uma requisição: do clique no navegador até a linha no banco de dados, e de volta.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/pt/java/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.49db6240b4502d2bf11bd12ed435a8e077885b93ccbe4921107bdb637a79551f.css" integrity="sha256-SdtiQLRQLSvxG9Eu1DWo4HeIW5PMvkkhEHvbY3p5VR8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1314/pt/java/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9bd476e372191b0268a3fcd0e3147be6d64c5d6c3c8b9eb47c04995cb34699e5.css" integrity="sha256-m9R243IZGwJoo/zQ4xR75tZMXWw8i560fASZXLNGmeU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1314/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1314/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1314/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1314/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1314/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/pt/java/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/java/">
-<link rel="alternate" hreflang="pt" href="http://localhost:1313/pt/java/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1314/pt/java/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1314/java/">
+<link rel="alternate" hreflang="pt" href="http://localhost:1314/pt/java/">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,7 +72,7 @@
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/pt/" accesskey="h" title="Hussyvel Ribeiro | Tech Blog (Alt + H)">Hussyvel Ribeiro | Tech Blog</a>
+            <a href="http://localhost:1314/pt/" accesskey="h" title="Hussyvel Ribeiro | Tech Blog (Alt + H)">Hussyvel Ribeiro | Tech Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -96,7 +96,7 @@
                 </button><span class="nav-sep">|</span>
                     <ul class="lang-menu">
                         <li>
-                            <a href="http://localhost:1313/" title="English"
+                            <a href="http://localhost:1314/" title="English"
                                 aria-label="English">En</a>
                         </li>
                     </ul>
@@ -104,27 +104,27 @@
         </div>
         <ul id="menu" class="menu">
             <li>
-                <a href="http://localhost:1313/pt/posts/" title="Artigos">
+                <a href="http://localhost:1314/pt/posts/" title="Artigos">
                     <span>Artigos</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/tags/" title="Categorias">
+                <a href="http://localhost:1314/pt/tags/" title="Categorias">
                     <span>Categorias</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/about/" title="Sobre Mim">
+                <a href="http://localhost:1314/pt/about/" title="Sobre Mim">
                     <span>Sobre Mim</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/" title="Currículo">
+                <a href="http://localhost:1314/pt/" title="Currículo">
                     <span>Currículo</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/pt/search/" title="Pesquisar">
+                <a href="http://localhost:1314/pt/search/" title="Pesquisar">
                     <span>Pesquisar</span>
                 </a>
             </li>
@@ -281,93 +281,14 @@
     </svg>
   
 </div>
-<p>O Java fica bem no meio dessa cadeia, e é exatamente por isso que ele funciona como hub desta série: pra entender de verdade o que um controller do Spring está fazendo, você precisa entender o que chegou antes dele (uma conexão TCP aceita pelo kernel, intermediada por um nginx) e pra onde ele repassa o trabalho em seguida (um pool de conexões, uma transação, uma busca em índice). A maioria das explicações sobre &ldquo;backend&rdquo; começa e termina no código da aplicação. Esta não.</p>
-<h2 id="a-cadeia">A cadeia<a hidden class="anchor" aria-hidden="true" href="#a-cadeia">#</a></h2>
-<ol>
-<li><strong><a href="http://localhost:1313/pt/java/javascript-in-the-browser/">JavaScript no Navegador</a></strong> — onde a requisição nasce: <code>fetch</code>, o event loop, e por que o navegador não trava esperando a resposta.</li>
-<li><strong><a href="http://localhost:1313/pt/java/http-and-networking/">HTTP e Rede</a></strong> — DNS, o handshake do TCP, TLS, e como é, na prática, uma requisição HTTP em bytes no fio.</li>
-<li><strong><a href="http://localhost:1313/pt/java/linux-process-socket-nginx/">Linux: Processo, Socket e Nginx</a></strong> — como o kernel transforma um fluxo de bytes em algo que um processo de servidor consegue ler, e por que o nginx fica na frente do Java em quase todo lugar.</li>
-<li><strong><a href="http://localhost:1313/pt/java/jvm-threads-and-spring/">Java e a JVM: Threads e Spring</a></strong> — a requisição cai num thread pool, o <code>DispatcherServlet</code> faz o roteamento, e a JVM faz uma quantidade surpreendente de trabalho que você nunca pediu.</li>
-<li><strong><a href="http://localhost:1313/pt/java/sql-connection-transaction-index/">SQL: Conexão, Transação e Índice</a></strong> — a requisição finalmente toca os dados: uma conexão vinda de um pool, uma transação com fronteiras bem definidas, e o índice que decide se a consulta leva 2ms ou 2s.</li>
-</ol>
-<p>Leia em ordem se quiser a viagem completa, ou vá direto pra camada que você está depurando hoje. Cada post assume que você sabe mais ou menos o que as outras camadas fazem, mas não os detalhes — é justamente esse o ponto de conectar tudo.</p>
+<p>O Java fica bem no meio dessa cadeia, e é exatamente por isso que ele funciona como hub aqui: pra entender de verdade o que um controller do Spring está fazendo, você precisa entender o que chegou antes dele (uma conexão TCP aceita pelo kernel, intermediada por um nginx) e pra onde ele repassa o trabalho em seguida (um pool de conexões, uma transação, uma busca em índice). A maioria das explicações sobre &ldquo;backend&rdquo; começa e termina no código da aplicação. Esta não vai.</p>
 
 
 </div>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">JavaScript no Navegador: Onde a Requisição Começa
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Antes do HTTP, antes do Java, antes do SQL — existe uma chamada fetch() parada num event loop. É aqui que a jornada da nossa requisição começa.</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-10-01 09:00:00 -0300 -03'>1 de outubro de 2026</span></footer>
-  <a class="entry-link" aria-label="post link to JavaScript no Navegador: Onde a Requisição Começa" href="http://localhost:1313/pt/java/javascript-in-the-browser/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">HTTP e Rede: A Requisição Chega ao Fio
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Entre o navegador e o servidor não existe mágica nenhuma — só DNS, um handshake TCP, TLS, e um protocolo quase texto puro rodando em cima dos três.</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-10-01 09:10:00 -0300 -03'>1 de outubro de 2026</span></footer>
-  <a class="entry-link" aria-label="post link to HTTP e Rede: A Requisição Chega ao Fio" href="http://localhost:1313/pt/java/http-and-networking/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Linux: Processo, Socket e Nginx
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Antes da sua aplicação Spring ver qualquer coisa, o kernel já aceitou uma conexão, entregou pra um socket, e o nginx já decidiu o que fazer com ela.</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-10-01 09:20:00 -0300 -03'>1 de outubro de 2026</span></footer>
-  <a class="entry-link" aria-label="post link to Linux: Processo, Socket e Nginx" href="http://localhost:1313/pt/java/linux-process-socket-nginx/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java e a JVM: Threads e Spring
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Este é o centro da série. A requisição finalmente chega no seu código — mas precisou de um thread pool, um dispatcher e um coletor de lixo que você nunca chama diretamente pra chegar até aqui.</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-10-01 09:30:00 -0300 -03'>1 de outubro de 2026</span></footer>
-  <a class="entry-link" aria-label="post link to Java e a JVM: Threads e Spring" href="http://localhost:1313/pt/java/jvm-threads-and-spring/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SQL: Conexão, Transação e Índice
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>O último trecho de ida, e o primeiro de volta. É aqui que a requisição para de ser abstrata e passa a tocar linhas de verdade no disco.</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-10-01 09:40:00 -0300 -03'>1 de outubro de 2026</span></footer>
-  <a class="entry-link" aria-label="post link to SQL: Conexão, Transação e Índice" href="http://localhost:1313/pt/java/sql-connection-transaction-index/"></a>
-</article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/pt/">Hussyvel Ribeiro | Tech Blog</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1314/pt/">Hussyvel Ribeiro | Tech Blog</a></span> · 
 
     
     

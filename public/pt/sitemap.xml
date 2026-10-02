@@ -2,337 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/pt/java/javascript-in-the-browser/</loc>
-    <lastmod>2026-10-01T09:00:00-03:00</lastmod>
+    <loc>http://localhost:1314/pt/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/java/javascript-in-the-browser/"
+                href="http://localhost:1314/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/java/javascript-in-the-browser/"
+                href="http://localhost:1314/pt/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/pt/java/http-and-networking/</loc>
-    <lastmod>2026-10-01T09:10:00-03:00</lastmod>
+    <loc>http://localhost:1314/pt/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/java/http-and-networking/"
+                href="http://localhost:1314/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/java/http-and-networking/"
+                href="http://localhost:1314/pt/"
                 />
   </url><url>
-    <loc>http://localhost:1313/pt/java/linux-process-socket-nginx/</loc>
-    <lastmod>2026-10-01T09:20:00-03:00</lastmod>
+    <loc>http://localhost:1314/pt/java/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/java/linux-process-socket-nginx/"
+                href="http://localhost:1314/java/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/java/linux-process-socket-nginx/"
+                href="http://localhost:1314/pt/java/"
                 />
   </url><url>
-    <loc>http://localhost:1313/pt/java/jvm-threads-and-spring/</loc>
-    <lastmod>2026-10-01T09:30:00-03:00</lastmod>
+    <loc>http://localhost:1314/pt/javascript/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/java/jvm-threads-and-spring/"
+                href="http://localhost:1314/javascript/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/java/jvm-threads-and-spring/"
+                href="http://localhost:1314/pt/javascript/"
                 />
   </url><url>
-    <loc>http://localhost:1313/pt/java/sql-connection-transaction-index/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
+    <loc>http://localhost:1314/pt/linux/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/java/sql-connection-transaction-index/"
+                href="http://localhost:1314/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/java/sql-connection-transaction-index/"
+                href="http://localhost:1314/pt/linux/"
                 />
   </url><url>
-    <loc>http://localhost:1313/pt/tags/banco-de-dados/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pt/categories/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
+    <loc>http://localhost:1314/pt/sql/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="http://localhost:1314/sql/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/categories/"
+                href="http://localhost:1314/pt/sql/"
                 />
   </url><url>
-    <loc>http://localhost:1313/pt/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
+    <loc>http://localhost:1314/pt/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="http://localhost:1314/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/"
+                href="http://localhost:1314/pt/tags/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/%C3%ADndices/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pt/categories/java/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/categories/java/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/categories/java/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/java/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/java/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/java/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/postgresql/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/postgresql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/postgresql/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/s%C3%A9rie/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/sql/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/sql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/sql/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/transa%C3%A7%C3%B5es/</loc>
-    <lastmod>2026-10-01T09:40:00-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/java/</loc>
-    <lastmod>2026-10-01T09:30:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/java/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/java/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/jvm/</loc>
-    <lastmod>2026-10-01T09:30:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/jvm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/jvm/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/spring/</loc>
-    <lastmod>2026-10-01T09:30:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/spring/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/spring/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/threads/</loc>
-    <lastmod>2026-10-01T09:30:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/threads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/threads/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/linux/</loc>
-    <lastmod>2026-10-01T09:20:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/linux/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/nginx/</loc>
-    <lastmod>2026-10-01T09:20:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/nginx/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/nginx/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/processos/</loc>
-    <lastmod>2026-10-01T09:20:00-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/sockets/</loc>
-    <lastmod>2026-10-01T09:20:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/sockets/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/sockets/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/dns/</loc>
-    <lastmod>2026-10-01T09:10:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/dns/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/dns/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/http/</loc>
-    <lastmod>2026-10-01T09:10:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/http/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/http/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/rede/</loc>
-    <lastmod>2026-10-01T09:10:00-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/tcp/</loc>
-    <lastmod>2026-10-01T09:10:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/tcp/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/tcp/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/tls/</loc>
-    <lastmod>2026-10-01T09:10:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/tls/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/tls/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/javascript/</loc>
-    <lastmod>2026-10-01T09:00:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/javascript/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/javascript/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt/tags/navegador/</loc>
-    <lastmod>2026-10-01T09:00:00-03:00</lastmod>
   </url>
 </urlset>

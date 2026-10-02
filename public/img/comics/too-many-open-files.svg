@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 336" width="100%" height="auto" role="img" aria-label="Linux file descriptors comic">
+<title>Linux file descriptors comic</title>
+<rect x="0" y="0" width="900" height="336" fill="#fffdf7"/>
+<rect x="5" y="0" width="290" height="300" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<rect x="305" y="0" width="290" height="300" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<rect x="605" y="0" width="290" height="300" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<g transform="translate(155,270)"><line x1="0" y1="-40.0" x2="-18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-40.0" x2="18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-104.0" x2="0" y2="-40.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="-20.0" y2="-150.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="20.0" y2="-150.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<circle cx="0" cy="-120.0" r="16.0" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3.0"/></g>
+<polygon points="145,148 167,148 153,172" fill="white" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/><rect x="146" y="144" width="20" height="8" fill="white"/><rect x="30" y="90" width="240" height="60" rx="14" fill="white" stroke="#1a1a1a" stroke-width="2.5"/><text font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-size="13" font-weight="normal" fill="#1a1a1a" text-anchor="middle"><tspan x="150.0" y="115.33333333333333">Server's throwing errors</tspan><tspan x="150.0" y="133.33333333333331">under load!</tspan></text>
+<rect x="330" y="40" width="240" height="60" rx="3" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="2"/>
+<text x="338" y="58" font-family="monospace" font-size="11" fill="#4ade80">$ tail -f app.log</text>
+<text x="338" y="74" font-family="monospace" font-size="11" fill="#4ade80">Too many open files</text>
+<g transform="translate(455,270)"><line x1="0" y1="-40.0" x2="-18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-40.0" x2="18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-104.0" x2="0" y2="-40.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="-18.0" y2="-42.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="18.0" y2="-42.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<circle cx="0" cy="-112.0" r="16.0" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3.0"/></g>
+<path d="M 475 210 c 4 6 8 10 8 15 a 8 8 0 1 1 -16 0 c 0 -5 4 -9 8 -15 z" fill="#5dade2" stroke="#1a1a1a" stroke-width="1.5"/>
+<rect x="728" y="8" width="46" height="34" rx="3" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3"/>
+<circle cx="738" cy="17" r="3" fill="#1a1a1a"/>
+<line x1="734" y1="28" x2="768" y2="28" stroke="#1a1a1a" stroke-width="2"/>
+<line x1="734" y1="35" x2="758" y2="35" stroke="#1a1a1a" stroke-width="2"/>
+<text x="755" y="52" font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle" letter-spacing="1">NGINX</text>
+<g transform="translate(755,270)"><line x1="0" y1="-40.0" x2="-18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-40.0" x2="18.0" y2="0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-104.0" x2="0" y2="-40.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="-18.0" y2="-42.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="0" y1="-85.0" x2="18.0" y2="-42.0" stroke="#1a1a1a" stroke-width="3.0" stroke-linecap="round"/>
+<circle cx="0" cy="-112.0" r="16.0" fill="#fffdf7" stroke="#1a1a1a" stroke-width="3.0"/></g>
+<polygon points="745,106 767,106 753,130" fill="white" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/><rect x="746" y="102" width="20" height="8" fill="white"/><rect x="630" y="60" width="240" height="48" rx="14" fill="white" stroke="#1a1a1a" stroke-width="2.5"/><text font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-size="13" font-weight="normal" fill="#1a1a1a" text-anchor="middle"><tspan x="750.0" y="79.33333333333333">I tried to warn you</tspan><tspan x="750.0" y="97.33333333333333">about the fds.</tspan></text>
+<text x="450.0" y="324" font-family="'Comic Sans MS', 'Comic Sans', 'Segoe Print', cursive, sans-serif" font-style="italic" font-size="15" fill="#1a1a1a" text-anchor="middle">ulimit -n was sitting right there.</text>
+</svg>
