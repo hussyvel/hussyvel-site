@@ -14,9 +14,6 @@ defaultContentLanguage = "en"
     url = "https://www.linkedin.com/in/hussyvelribeiro"
 
 [languages]
-  # ==========================================
-  # IDIOMA 1: INGLÊS (Padrão)
-  # ==========================================
   [languages.en]
     languageName = "English"
     weight = 1
@@ -25,16 +22,21 @@ defaultContentLanguage = "en"
     [languages.en.params.profileMode]
       enabled = true
       title = "Hi, I'm Hussyvel 👋"
-      subtitle = "Full Stack Software Developer | Java, GO, C, Javascript (Angular) and SQL"
       imageUrl = "/img/perfil-linkedin2.jpeg"
       imageWidth = 150
       imageHeight = 150
 
-[[languages.en.menu.main]]
+    [[languages.en.menu.main]]
       identifier = "posts"
       name = "Posts"
       url = "/posts/"
       weight = 10
+
+    [[languages.en.menu.main]]
+      identifier = "projects"
+      name = "Projects"
+      url = "/projects/"
+      weight = 15
 
     [[languages.en.menu.main]]
       identifier = "about"
@@ -43,91 +45,25 @@ defaultContentLanguage = "en"
       weight = 20
 
     [[languages.en.menu.main]]
-      identifier = "linguagens"
+      identifier = "languages"
       name = "Languages"
-      url = "/linguagens/"
+      url = "/languages/"
       weight = 30
 
     [[languages.en.menu.main]]
-      identifier = "redes"
+      identifier = "networking"
       name = "Networking"
-      url = "/redes/"
-      weight = 40
-
-    [[languages.en.menu.main]]
-      identifier = "banco-de-dados"
-      name = "Databases"
-      url = "/banco-de-dados/"
+      url = "/networking/"
       weight = 50
 
     [[languages.en.menu.main]]
-      identifier = "infraestrutura"
+      identifier = "infrastructure"
       name = "Infrastructure"
-      url = "/infraestrutura/"
-      weight = 60
+      url = "/infrastructure/"
+      weight = 52
 
     [[languages.en.menu.main]]
       identifier = "resume"
       name = "Resume"
       url = "/resume/"
-      weight = 80
-
-
-  # ==========================================
-  # IDIOMA 2: PORTUGUÊS
-  # ==========================================
-  [languages.pt]
-    languageName = "Português"
-    weight = 2
-    title = "Hussyvel Ribeiro | Blog de Tecnologia"
-
-    [languages.pt.params.profileMode]
-      enabled = true
-      title = "Olá, sou o Hussyvel 👋"
-      subtitle = "Desenvolvedor de Software Full Stack | Java, GO, C, Javascript (Angular) e SQL"
-      imageUrl = "/img/perfil-linkedin2.jpeg"
-      imageWidth = 150
-      imageHeight = 150
-
-[[languages.pt.menu.main]]
-      identifier = "posts"
-      name = "Artigos"
-      url = "/pt/posts/"
-      weight = 10
-
-    [[languages.pt.menu.main]]
-      identifier = "about"
-      name = "Biografia"
-      url = "/pt/about/"
-      weight = 20
-
-    [[languages.pt.menu.main]]
-      identifier = "linguagens"
-      name = "Linguagens"
-      url = "/pt/linguagens/"
-      weight = 30
-
-    [[languages.pt.menu.main]]
-      identifier = "redes"
-      name = "Redes"
-      url = "/pt/redes/"
-      weight = 40
-
-    [[languages.pt.menu.main]]
-      identifier = "banco-de-dados"
-      name = "Banco de Dados"
-      url = "/pt/banco-de-dados/"
-      weight = 50
-
-    [[languages.pt.menu.main]]
-      identifier = "infraestrutura"
-      name = "Infraestrutura"
-      url = "/pt/infraestrutura/"
       weight = 60
-
-    [[languages.pt.menu.main]]
-      identifier = "resume"
-      name = "Currículo"
-      url = "/pt/resume/"
-      weight = 80
-
