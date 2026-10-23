@@ -2,7 +2,7 @@
 title: "Bitwise Operators in Java: What They Are, Where They Came From, and When to Use Them"
 date: 2026-10-22
 tech: ["java"]
-draft: true
+draft: false
 ---
 
 Bitwise operators work on each individual bit of an integer instead of treating the number as a single value. Computers already store everything in binary, and these operators give programmers direct access to those ones and zeros.
