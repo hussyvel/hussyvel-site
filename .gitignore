@@ -1,0 +1,4 @@
+# Hugo build output and caches (generated fresh by the GitHub Actions deploy, no need to commit)
+/public/
+/resources/
+.hugo_build.lock

@@ -38,83 +38,40 @@ defaultContentLanguage = "en"
 
     [[languages.en.menu.main]]
       identifier = "about"
-      name = "About"
+      name = "Biography"
       url = "/about/"
       weight = 20
 
     [[languages.en.menu.main]]
-      identifier = "java"
-      name = "Java"
-      url = "/java/"
+      identifier = "linguagens"
+      name = "Languages"
+      url = "/linguagens/"
       weight = 30
 
     [[languages.en.menu.main]]
-      identifier = "javascript"
-      name = "Javascript"
-      url = "/javascript/"
+      identifier = "redes"
+      name = "Networking"
+      url = "/redes/"
       weight = 40
 
     [[languages.en.menu.main]]
-      identifier = "c-lang"
-      name = "C"
-      url = "/c/"
+      identifier = "banco-de-dados"
+      name = "Databases"
+      url = "/banco-de-dados/"
       weight = 50
 
     [[languages.en.menu.main]]
-      identifier = "go"
-      name = "GO"
-      url = "/go/"
+      identifier = "infraestrutura"
+      name = "Infrastructure"
+      url = "/infraestrutura/"
       weight = 60
 
     [[languages.en.menu.main]]
-      identifier = "sql"
-      name = "SQL"
-      url = "/sql/"
-      weight = 70
-
-    [[languages.en.menu.main]]
-      identifier = "git"
-      name = "Git"
-      url = "/git/"
+      identifier = "resume"
+      name = "Resume"
+      url = "/resume/"
       weight = 80
 
-    [[languages.en.menu.main]]
-      identifier = "linux"
-      name = "Linux"
-      url = "/linux/"
-      weight = 90
-
-    [[languages.en.menu.main]]
-      identifier = "redes"
-      name = "Networking" # Em inglês fica melhor "Networking", mas a pasta pode ser /redes/
-      url = "/redes/"
-      weight = 100
-
-    [[languages.en.menu.main]]
-      identifier = "hardware"
-      name = "Hardware"
-      url = "/hardware/"
-      weight = 110
-
-    [[languages.en.menu.main]]
-      identifier = "AWS"
-      name = "AWS"
-      url = "/aws/"
-      weight = 120
-
-    [[languages.en.menu.main]]
-      identifier = "Services"
-      name = "Services"
-      url = "/services/"
-      weight = 130
-
-    [[languages.en.menu.main]]
-      identifier = "resume"
-      name = "Resume" # Na área de tecnologia em inglês, "Resume" é mais usado que "Curriculum"
-      url = "/resume/"
-      weight = 140
-    
-    
 
   # ==========================================
   # IDIOMA 2: PORTUGUÊS
@@ -140,78 +97,37 @@ defaultContentLanguage = "en"
 
     [[languages.pt.menu.main]]
       identifier = "about"
-      name = "Sobre Mim"
+      name = "Biografia"
       url = "/pt/about/"
       weight = 20
 
     [[languages.pt.menu.main]]
-      identifier = "java"
-      name = "Java"
-      url = "/pt/java/"
+      identifier = "linguagens"
+      name = "Linguagens"
+      url = "/pt/linguagens/"
       weight = 30
-
-    [[languages.pt.menu.main]]
-      identifier = "javascript"
-      name = "Javascript"
-      url = "/pt/javascript/"
-      weight = 40
-
-    [[languages.pt.menu.main]]
-      identifier = "c-lang"
-      name = "C"
-      url = "/pt/c/"
-      weight = 50
-
-    [[languages.pt.menu.main]]
-      identifier = "go"
-      name = "GO"
-      url = "/pt/go/"
-      weight = 60
-
-    [[languages.pt.menu.main]]
-      identifier = "sql"
-      name = "SQL"
-      url = "/pt/sql/"
-      weight = 70
-
-    [[languages.pt.menu.main]]
-      identifier = "git"
-      name = "Git"
-      url = "/pt/git/"
-      weight = 80
-
-    [[languages.pt.menu.main]]
-      identifier = "linux"
-      name = "Linux"
-      url = "/pt/linux/"
-      weight = 90
 
     [[languages.pt.menu.main]]
       identifier = "redes"
       name = "Redes"
       url = "/pt/redes/"
-      weight = 100
+      weight = 40
 
     [[languages.pt.menu.main]]
-      identifier = "hardware"
-      name = "Hardware"
-      url = "/pt/hardware/"
-      weight = 110
+      identifier = "banco-de-dados"
+      name = "Banco de Dados"
+      url = "/pt/banco-de-dados/"
+      weight = 50
 
-     [[languages.pt.menu.main]]
-      identifier = "AWS"
-      name = "AWS"
-      url = "/pt/aws/"
-      weight = 120
-
-      [[languages.pt.menu.main]]
-      identifier = "services"
-      name = "Serviços"
-      url = "/pt/services/"
-      weight = 130
+    [[languages.pt.menu.main]]
+      identifier = "infraestrutura"
+      name = "Infraestrutura"
+      url = "/pt/infraestrutura/"
+      weight = 60
 
     [[languages.pt.menu.main]]
       identifier = "resume"
       name = "Currículo"
       url = "/pt/resume/"
-      weight = 140
+      weight = 80
+

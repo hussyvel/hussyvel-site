@@ -1,0 +1,11 @@
+{{- $tech := .Get 0 -}}
+{{- $posts := where (where site.RegularPages "Section" "posts") "Params.tech" "intersect" (slice $tech) -}}
+{{- if $posts }}
+<ul>
+{{- range $posts.ByDate.Reverse }}
+  <li>{{ .Date.Format "02/01/2006" }} — <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{- end }}
+</ul>
+{{- else }}
+<p>{{ if eq site.Language.Lang "pt" }}Nenhum artigo publicado ainda.{{ else }}No articles published yet.{{ end }}</p>
+{{- end }}
