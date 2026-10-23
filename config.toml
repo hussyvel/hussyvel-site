@@ -6,6 +6,7 @@ defaultContentLanguage = "en"
   home = ["HTML", "RSS", "JSON"]
 
 [params]
+  defaultTheme = "light"
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/hussyvel"
