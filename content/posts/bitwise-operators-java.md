@@ -60,3 +60,122 @@ The story has three stages: first the mathematics, then the hardware, and finall
 - **Micro-optimizing without measuring:** the JIT compiler already turns `x * 8` into `x << 3` when it pays off. Replace arithmetic with shifts only when it makes the code clearer or a profiler shows a real gain.
 - **Tricks that confuse readers:** swapping variables with XOR is a curiosity, not a good practice.
 - **Known pitfalls:** the shift distance is reduced modulo 32 (or 64 for `long`), `byte` and `short` are promoted to `int` before the operation, and `&` and `|` on `boolean` values do not short-circuit.
+
+## Hands-on Example: `&&` vs `&` on Booleans
+
+The last pitfall above is easier to see in code. This small project validates a user through an external service. The `Usuario` class holds a name and an active flag:
+
+```java
+public class Usuario {
+
+    private final String nome;
+    private final boolean ativo;
+
+    public Usuario(String nome, boolean ativo) {
+        this.nome = nome;
+        this.ativo = ativo;
+    }
+
+    public String getNome() { return nome; }
+
+    public boolean isAtivo() { return ativo; }
+}
+```
+
+`ServicoExterno` stands for any remote call, such as an API or a database. It returns the user as the service sees it:
+
+```java
+public interface ServicoExterno {
+
+    Usuario consultar(Usuario usuario);
+}
+```
+
+`Validador` checks that the user is not `null` and, only then, asks the service:
+
+```java
+public class Validador {
+
+    public static boolean ehValido(Usuario usuario, ServicoExterno servico) {
+        return usuario != null && servico.consultar(usuario).isAtivo();
+    }
+}
+```
+
+The `&&` operator is short-circuit: when the left side is `false`, the right side never runs. With a `null` user, the service is not called and the method returns `false`. If you write `&` instead, Java evaluates **both** sides, so `servico.consultar(null)` runs and the `.isAtivo()` call on its result can throw a `NullPointerException`. Besides the exception, it also means a useless call to the external service.
+
+A `main` method shows the safe version:
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        ServicoExterno servico = usuario -> usuario;
+
+        Usuario usuarioAtivo = new Usuario("Hussyvel", true);
+        Usuario usuarioNulo = null;
+
+        System.out.println("Active user is valid? " + Validador.ehValido(usuarioAtivo, servico));
+        System.out.println("Null user is valid? " + Validador.ehValido(usuarioNulo, servico));
+    }
+}
+```
+
+### Testing It with JUnit 5
+
+The tests below use lambdas as the service, so no mocking library is needed. The key test proves the short-circuit: with a `null` user, the service must never be called.
+
+```java
+class ValidadorTest {
+
+    private final ServicoExterno servicoEco = usuario -> usuario;
+
+    @Test
+    void deveRetornarTrueParaUsuarioAtivo() {
+        assertTrue(Validador.ehValido(new Usuario("Ana", true), servicoEco));
+    }
+
+    @Test
+    void deveRetornarFalseParaUsuarioInativo() {
+        assertFalse(Validador.ehValido(new Usuario("Ana", false), servicoEco));
+    }
+
+    @Test
+    void deveRetornarFalseParaUsuarioNulo() {
+        assertFalse(Validador.ehValido(null, servicoEco));
+    }
+
+    @Test
+    void naoDeveChamarServicoQuandoUsuarioForNulo() {
+        AtomicInteger chamadas = new AtomicInteger();
+        ServicoExterno servico = usuario -> {
+            chamadas.incrementAndGet();
+            return usuario;
+        };
+
+        Validador.ehValido(null, servico);
+
+        assertEquals(0, chamadas.get());
+    }
+
+    @Test
+    void deveUsarOResultadoDoServicoEmVezDoUsuarioOriginal() {
+        Usuario original = new Usuario("Ana", true);
+        ServicoExterno servico = usuario -> new Usuario("Ana", false);
+
+        assertFalse(Validador.ehValido(original, servico));
+    }
+
+    @Test
+    void devePropagarExcecaoDoServico() {
+        ServicoExterno servico = usuario -> {
+            throw new IllegalStateException("servico fora do ar");
+        };
+
+        assertThrows(IllegalStateException.class,
+                () -> Validador.ehValido(new Usuario("Ana", true), servico));
+    }
+}
+```
+
+Change `&&` to `&` in `Validador` and `naoDeveChamarServicoQuandoUsuarioForNulo` fails right away, because the service is called once. A good test suite catches this kind of one-character mistake.
