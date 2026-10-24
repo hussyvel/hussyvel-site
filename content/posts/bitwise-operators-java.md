@@ -5,6 +5,10 @@ tech: ["java"]
 draft: false
 ---
 
+**In short:** use bitwise operators in Java when the problem is genuinely binary. That means compact permissions and flags (hand-written bit masks, as in hardware registers; in everyday application code, prefer `EnumSet`, which stores the flags as bits for you, without any bitwise operators in your code), binary protocols and formats (parsing headers, RGB/ARGB colors with `<<`, `>>` and `&`), hashes and checksums (`hashCode()`, CRC, MurmurHash), and low-level algorithms where the bit operation *is* the algorithm (counting bits, detecting a power of two with `(n & (n - 1)) == 0`, or swapping without a temporary variable in specific embedded-systems contexts).
+
+Avoid them when the only goal is to "optimize". The compiler and the JIT already do strength reduction automatically, so replacing `x * 2` with `x << 1` by hand brings no real gain and only hurts readability. This is the kind of premature optimization that Knuth, and later Bloch in *Effective Java*, warn about: it is only worth it after measuring with a profiler, never by assumption.
+
 Bitwise operators work on each individual bit of an integer instead of treating the number as a single value. Computers already store everything in binary, and these operators give programmers direct access to those ones and zeros.
 
 Java has seven of them:
