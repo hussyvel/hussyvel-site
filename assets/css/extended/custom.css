@@ -38,34 +38,281 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary);
     text-decoration: underline;
 }
-/* Menu quebra em várias linhas em vez de gerar barra de rolagem horizontal */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    overflow-x: visible;
-    white-space: normal;
-    row-gap: 4px;
+/* Cabeçalho estilo TechCrunch: sanduíche, logo, links de tópicos e busca */
+:root {
+    --tc-accent: #0a9e01;
 }
 
-/* Barra de busca centralizada abaixo do menu */
-.header-search {
+.tc-header {
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+}
+
+.tc-bar {
     display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+    height: 56px;
+}
+
+.tc-logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--primary);
+}
+
+.tc-logo b {
+    color: var(--tc-accent);
+}
+
+.tc-nav {
+    flex: 1;
+    min-width: 0;
+}
+
+.tc-nav ul {
+    display: flex;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tc-nav a {
+    display: block;
+    padding: 18px 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--primary);
+    border-bottom: 3px solid transparent;
+}
+
+.tc-nav a:hover,
+.tc-nav a.active {
+    color: var(--tc-accent);
+    border-bottom-color: var(--tc-accent);
+}
+
+.tc-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.tc-icon-btn {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    margin: 12px 0 4px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--primary);
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.header-search input {
+.tc-icon-btn:hover {
+    background: var(--code-bg);
+}
+
+.tc-burger {
+    flex-direction: column;
+    gap: 5px;
+    margin-left: -8px;
+}
+
+.tc-burger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+}
+
+.tc-search {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--gap) 12px;
+}
+
+.tc-search[hidden] {
+    display: none;
+}
+
+.tc-search input {
     width: 100%;
-    max-width: 420px;
-    padding: 8px 16px;
+    padding: 10px 14px;
     font-size: 16px;
     color: var(--primary);
     background: var(--code-bg);
     border: 1px solid var(--border);
-    border-radius: 999px;
+    border-radius: 4px;
     outline: none;
 }
 
-.header-search input:focus {
-    border-color: var(--secondary);
+.tc-search input:focus {
+    border-color: var(--tc-accent);
+}
+
+/* Gaveta lateral do menu sanduíche */
+.tc-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.tc-overlay[hidden] {
+    display: none;
+}
+
+.tc-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1002;
+    width: min(340px, 88vw);
+    padding: 16px 24px 32px;
+    overflow-y: auto;
+    background: var(--theme);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    visibility: hidden;
+}
+
+.tc-drawer.open {
+    transform: none;
+    visibility: visible;
+}
+
+.tc-drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.tc-drawer h3 {
+    margin: 24px 0 8px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tc-accent);
+    border-bottom: 2px solid var(--primary);
+}
+
+.tc-drawer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tc-drawer li a {
+    display: block;
+    padding: 9px 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.tc-drawer li a:hover {
+    color: var(--tc-accent);
+}
+
+@media (max-width: 760px) {
+    .tc-nav {
+        display: none;
+    }
+}
+
+/* Feed da home: destaque + lista de cards */
+.tc-feed {
+    margin-top: 8px;
+}
+
+.tc-card {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.tc-card h2 {
+    margin: 4px 0 8px;
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.tc-card h2 a:hover {
+    color: var(--tc-accent);
+}
+
+.tc-card-lead h2 {
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.tc-kicker {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--tc-accent);
+}
+
+.tc-summary {
+    margin: 0 0 10px;
+    font-size: 17px;
+    color: var(--secondary);
+}
+
+.tc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+.tc-meta span:first-child {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Barra de progresso de leitura no topo, da esquerda para a direita */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--tc-accent);
+    z-index: 1000;
+    transition: width 0.1s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #progress-bar {
+        transition: none;
+    }
 }

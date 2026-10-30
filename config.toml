@@ -7,6 +7,7 @@ defaultContentLanguage = "en"
 
 [params]
   defaultTheme = "light"
+  mainSections = ["posts"]
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/hussyvel"
@@ -20,51 +21,57 @@ defaultContentLanguage = "en"
     weight = 1
     title = "Hussyvel Ribeiro | Tech Blog"
 
-    [languages.en.params.profileMode]
-      enabled = true
-      title = "Hi, I'm Hussyvel 👋"
-      imageUrl = "/img/perfil-linkedin2.jpeg"
-      imageWidth = 150
-      imageHeight = 150
-
     [[languages.en.menu.main]]
-      identifier = "posts"
-      name = "Posts"
+      identifier = "latest"
+      name = "Latest"
       url = "/posts/"
       weight = 10
-
-    [[languages.en.menu.main]]
-      identifier = "projects"
-      name = "Projects"
-      url = "/projects/"
-      weight = 15
-
-    [[languages.en.menu.main]]
-      identifier = "about"
-      name = "Biography"
-      url = "/about/"
-      weight = 20
 
     [[languages.en.menu.main]]
       identifier = "languages"
       name = "Languages"
       url = "/languages/"
+      weight = 20
+
+    [[languages.en.menu.main]]
+      identifier = "ai"
+      name = "AI"
+      url = "/ai/"
       weight = 30
 
     [[languages.en.menu.main]]
       identifier = "networking"
       name = "Networking"
       url = "/networking/"
-      weight = 50
+      weight = 40
 
     [[languages.en.menu.main]]
       identifier = "infrastructure"
       name = "Infrastructure"
       url = "/infrastructure/"
-      weight = 52
+      weight = 50
 
-    [[languages.en.menu.main]]
+    # Links extras exibidos só no menu sanduíche
+    [[languages.en.menu.more]]
+      identifier = "projects"
+      name = "Projects"
+      url = "/projects/"
+      weight = 10
+
+    [[languages.en.menu.more]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 20
+
+    [[languages.en.menu.more]]
       identifier = "resume"
       name = "Resume"
       url = "/resume/"
-      weight = 60
+      weight = 30
+
+    [[languages.en.menu.more]]
+      identifier = "archive"
+      name = "Archive"
+      url = "/archive/"
+      weight = 40

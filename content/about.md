@@ -4,24 +4,18 @@ date: 2026-09-28T16:43:27-03:00
 draft: false
 ---
 
-I'm Hussyvel Ribeiro, a software developer from Brazil. I have spent more than five years building and modernizing enterprise systems, always close to areas where software has real consequences for people: healthcare and public service.
+Full Stack Java Developer with over 6 years of experience building, modernizing, and optimizing enterprise-level systems across the energy, healthcare, and government sectors.
 
-## Career
+As a Full Stack Engineer at **Petrobras**, I work on the development and maintenance of critical applications. My routine involves solving complex architectural and performance challenges to ensure operational stability. I am responsible for restructuring Java services, managing Maven build environments, and resolving structural flaws like cyclic package dependencies. I also work heavily on the database layer, analyzing Oracle DB performance logs, monitoring resource consumption (SGA), and tuning long-running SQL queries, while ensuring code quality through unit testing and SonarQube.
 
-My professional path started in healthcare, at **Philips Healthcare**, where I worked on backend services and frontend interfaces for medical platforms. Java, Angular and PL/SQL were my daily tools, in an environment where compliance and reliability are not optional. It taught me to treat quality as part of the work, not as a final step.
+At a state environmental agency in Brazil, I am part of the development team for **GUARÁ**, a greenfield platform built with Spring Boot 3, Java 17, Angular, and PostgreSQL. This project replaces a legacy JSF/Java 8 system serving over 6,000 users, introducing a modular architecture, role-based access control, REST APIs, and automated licensing workflows.
 
-Today I work at a state environmental agency in Brazil, on the team building **GUARÁ**: a new platform, created from scratch with Spring Boot 3, Java 17, Angular and PostgreSQL. It replaces a legacy JSF/Java 8 system used by more than 6,000 people, and brings a modular architecture, role-based access control, REST APIs and automated environmental licensing workflows.
+Previously, at **Philips Healthcare**, I contributed to backend services and frontend interfaces for medical platforms, working with Java, Angular, and PL/SQL in a high-compliance environment.
 
-## How I work
+My experience spans the entire stack: from database modeling and query optimization to building reactive Angular frontends and designing clean Spring Boot backends with JPA/Hibernate, Maven, and Docker.
 
-I like to understand a system from the database to the screen: modeling data and tuning queries in PostgreSQL, designing clean backends with Spring Boot and JPA/Hibernate, and building reactive interfaces in Angular. Maven, Docker, Git, GitLab CI/CD and Linux complete the day-to-day.
+**Core Stack:** Java, Spring Boot, Angular, PostgreSQL, Oracle DB, REST APIs, JPA/Hibernate, Maven, Docker, Git, GitLab CI/CD, Linux.
 
-## Why this blog
+I am actively seeking remote work opportunities with international teams (US, EU, UK, Canada) where I can contribute to impactful backend or full-stack projects.
 
-This site is my study notebook. I organize it by programming languages, networking, databases and infrastructure, and in each area I go through the technologies one at a time, guided by books and articles. What I learn is published in the timeline, so it may be useful to someone walking the same path.
-
-## Next steps
-
-I am looking for remote opportunities with international teams (US, EU, UK and Canada), working on backend or full-stack projects with impact.
-
-📩 Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/hussyvelribeiro).
+📩 Open to remote roles. Feel free to connect or reach out on [LinkedIn](https://www.linkedin.com/in/hussyvelribeiro).

@@ -1,0 +1,30 @@
+{{- define "main" }}
+{{- $pages := where site.RegularPages "Section" "posts" }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- $paginator := .Paginate $pages }}
+
+<section class="tc-feed">
+  {{- range $i, $p := $paginator.Pages }}
+  {{- $kind := cond (and (eq $i 0) (eq $paginator.PageNumber 1)) "tc-card tc-card-lead" "tc-card" }}
+  <article class="{{ $kind }}">
+    {{- with $p.Params.tech }}<span class="tc-kicker">{{ index . 0 | upper }}</span>{{ end }}
+    <h2><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h2>
+    {{- if eq $i 0 }}<p class="tc-summary">{{ $p.Summary | plainify | htmlUnescape | truncate 220 }}</p>{{ end }}
+    <div class="tc-meta">
+      {{- with site.Params.author }}<span>{{ . }}</span>{{ else }}<span>Hussyvel Ribeiro</span>{{ end }}
+      <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time>
+      <span>{{ $p.ReadingTime }} min read</span>
+    </div>
+  </article>
+  {{- else }}
+  <p>No articles published yet.</p>
+  {{- end }}
+</section>
+
+{{- if gt $paginator.TotalPages 1 }}
+<nav class="pagination">
+  {{- if $paginator.HasPrev }}<a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Newer</a>{{ end }}
+  {{- if $paginator.HasNext }}<a class="next" href="{{ $paginator.Next.URL | absURL }}">Older »</a>{{ end }}
+</nav>
+{{- end }}
+{{- end }}

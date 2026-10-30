@@ -17,3 +17,58 @@
   })();
 </script>
 {{- end }}
+
+<script>
+  // Menu sanduíche (gaveta lateral) e botão de busca do cabeçalho
+  (function () {
+    var drawer = document.getElementById('tc-drawer');
+    var overlay = document.getElementById('tc-overlay');
+    var burger = document.getElementById('tc-menu-btn');
+    var searchBtn = document.getElementById('tc-search-btn');
+    var search = document.getElementById('tc-search');
+    if (!drawer || !burger) return;
+    function setMenu(open) {
+      drawer.classList.toggle('open', open);
+      drawer.setAttribute('aria-hidden', String(!open));
+      burger.setAttribute('aria-expanded', String(open));
+      overlay.hidden = !open;
+      document.body.style.overflow = open ? 'hidden' : '';
+      if (open) document.getElementById('tc-menu-close').focus(); else burger.focus();
+    }
+    burger.addEventListener('click', function () { setMenu(true); });
+    document.getElementById('tc-menu-close').addEventListener('click', function () { setMenu(false); });
+    overlay.addEventListener('click', function () { setMenu(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) setMenu(false);
+    });
+    searchBtn.addEventListener('click', function () {
+      var show = search.hidden;
+      search.hidden = !show;
+      searchBtn.setAttribute('aria-expanded', String(show));
+      if (show) search.querySelector('input').focus();
+    });
+  })();
+</script>
+
+<div id="progress-bar" aria-hidden="true"></div>
+<script>
+  // Barra de progresso de leitura: cresce da esquerda para a direita conforme a rolagem
+  (function () {
+    var bar = document.getElementById('progress-bar');
+    if (!bar) return;
+    var ticking = false;
+    function update() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      bar.style.width = Math.min(100, Math.max(0, pct)) + '%';
+      ticking = false;
+    }
+    function onScroll() {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  })();
+</script>
