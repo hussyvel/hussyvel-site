@@ -1,0 +1,56 @@
+{{- /* Comentários só em posts; as demais páginas (about, resume, etc.) ficam sem. */ -}}
+{{- /* Link opcional para a discussão no LinkedIn: defina `linkedin = "<url do post>"` no front matter. */ -}}
+{{- with page.Params.linkedin }}
+<p style="margin-top: 2rem;">
+  <a href="{{ . }}" target="_blank" rel="noopener noreferrer">💬 Comente no LinkedIn →</a>
+</p>
+{{- end }}
+{{- with site.Params.giscus }}
+{{- if and .repoId .categoryId (eq page.Section "posts") }}
+<div class="giscus-wrapper" style="margin-top: 2rem;">
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ .repo }}"
+    data-repo-id="{{ .repoId }}"
+    data-category="{{ .category }}"
+    data-category-id="{{ .categoryId }}"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="pt"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
+<script>
+  // Mantém o tema do giscus sincronizado com o toggle do PaperMod.
+  (function () {
+    const setGiscusTheme = (theme) => {
+      const frame = document.querySelector("iframe.giscus-frame");
+      if (!frame) return;
+      frame.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: theme } } },
+        "https://giscus.app"
+      );
+    };
+    const currentTheme = () =>
+      document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+
+    // Aplica o tema atual assim que o iframe do giscus carregar.
+    window.addEventListener("message", (e) => {
+      if (e.origin === "https://giscus.app" && e.data && e.data.giscus) {
+        setGiscusTheme(currentTheme());
+      }
+    });
+
+    const toggle = document.getElementById("theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", () => setTimeout(() => setGiscusTheme(currentTheme()), 0));
+    }
+  })();
+</script>
+{{- end }}
+{{- end }}

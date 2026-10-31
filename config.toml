@@ -8,6 +8,14 @@ defaultContentLanguage = "en"
 [params]
   defaultTheme = "light"
   mainSections = ["posts"]
+  comments = true
+  ShowShareButtons = true
+  ShareButtons = ["linkedin"]
+  [params.giscus]
+    repo = "hussyvel/hussyvel-site"
+    repoId = "R_kgDOUxJNTg"
+    category = "Announcements"
+    categoryId = "DIC_kwDOUxJNTs4DKC4e"
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/hussyvel"
