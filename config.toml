@@ -22,6 +22,9 @@ defaultContentLanguage = "en"
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/hussyvelribeiro"
+  [[params.socialIcons]]
+    name = "youtube"
+    url = "https://www.youtube.com/@hussyvelribeiro5852"
 
 [languages]
   [languages.en]
